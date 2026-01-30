@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash Ultimate OOS Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- =================== TOP BANNER =================== -->
+  <div class="acnh-banner top-banner">
+    <div class="banner-top banner-top-content">
+      <a href="https://www.smashtoolbox.com/" rel="noopener noreferrer" class="banner-top-link">
+        Smash Toolbox
+      </a>
+    </div>
+  </div>
+
+  <!-- =================== HOME SCREEN =================== --> 
+  <div id="home-screen" class="screen centered" data-route="/">
+    <div class="screen-inner">
+      <img id="ult-tools-btn" src="images/ultimate.png" class="game-btn" onclick="navigateTo('/ultimate')" alt="Smash Ultimate">
+    </div>
+  </div>
+
+  <!-- =================== SMASH ULTIMATE SCREEN =================== -->
+  <div id="ultimate-screen" class="screen hidden centered" data-route="/ultimate">
+    <div class="screen-inner">
+      <div class="image-container">
+        <img id="ult-oosquiz-btn" src="images/ultoosquiz.png" class="game-btn" onclick="navigateTo('/ultimate/oosquiz')" alt="Smash Ultimate OOS Quiz">
+        <div class="overlay-text">Smash OOS Quiz</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== START SCREEN =================== -->
+  <div id="start-screen" class="screen hidden centered" data-route="/ultimate/oosquiz">
+    <div class="screen-inner">
+      <h1 id="title">Smash Ultimate OOS Quiz</h1>
+
+      <p>Select your character:</p>
+      <div id="character-grid">
+        <img
+        src="images/Mario1.png"
+        alt="Mario"
+        class="character-img"
+        data-character="Mario"
+        />
+        <img
+        src="images/DonkeyKong1.png"
+        alt="Donkey Kong"
+        class="character-img"
+        data-character="Donkey Kong"
+        />
+        <img
+        src="images/Link1.png"
+        alt="Link"
+        class="character-img"
+        data-character="Link"
+        />
+        <img
+        src="images/Samus1.png"
+        alt="Samus"
+        class="character-img"
+        data-character="Samus"
+        />
+        <img
+        src="images/Yoshi1.png"
+        alt="Yoshi"
+        class="character-img"
+        data-character="Yoshi"
+        />
+        <img
+        src="images/Kirby1.png"
+        alt="Kirby"
+        class="character-img"
+        data-character="Kirby"
+        />
+        <img
+        src="images/Fox1.png"
+        alt="Fox"
+        class="character-img"
+        data-character="Fox"
+        />
+        <img
+        src="images/Pikachu1.png"
+        alt="Pikachu"
+        class="character-img"
+        data-character="Pikachu"
+        />
+        <img
+        src="images/Luigi1.png"
+        alt="Luigi"
+        class="character-img"
+        data-character="Luigi"
+        />
+        <img
+        src="images/Ness1.png"
+        alt="Ness"
+        class="character-img"
+        data-character="Ness"
+        />
+        <img
+        src="images/CaptainFalcon1.png"
+        alt="Captain Falcon"
+        class="character-img"
+        data-character="Captain Falcon"
+        />
+        <img
+        src="images/Jigglypuff1.png"
+        alt="Jigglypuff"
+        class="character-img"
+        data-character="Jigglypuff"
+        />     
+        <img
+          src="images/MinMin1.png"
+          alt="Min Min"
+          class="character-img"
+          data-character="Min Min"
+        />
+      </div>
+
+      <button id="start-quiz-btn" class="primary-btn" disabled>Start</button>
+      <button id="check-oos-frames-btn" class="secondary-btn" disabled>
+        Check OOS Frame Data
+      </button>
+      <button id="check-shield-advantage-btn" class="secondary-btn" disabled>
+        Check Shield Advantage Data
+      </button>
+      <button id="howto-btn" class="secondary-btn">
+        How to Play/Assumptions
+      </button>
+      <button id="submit-feedback-btn-start" class="secondary-btn">
+        Submit Feedback
+      </button>
+    </div>  
+  </div>
+
+<!-- =================== OOS Frame Data SCREEN =================== -->
+  <div id="oos-frames-screen" class="screen hidden">
+    <div class="screen-inner">
+      <!-- Character image -->
+      <img id="oos-frames-character-img" src="" alt="Character" />
+
+      <p id="oos-frames-character-img-label"></p>
+      <div id="oos-frames-list">
+        <table></table>
+      </div>
+
+      <button id="back-to-start-oos" class="secondary-btn">Back to Character Select Screen</button>
+    </div>
+  </div>
+
+<!-- =================== Shield Advantage SCREEN =================== -->
+  <div id="shield-advantage-screen" class="screen hidden">
+    <div class="screen-inner">
+      <!-- Character image -->
+      <img id="shield-advantage-character-img" src="" alt="Character" />
+
+      <p id="shield-advantage-character-img-label"></p>
+      <div id="shield-advantage-list">
+        <table></table>
+      </div>
+
+      <button id="back-to-start-shield-advantage" class="secondary-btn">Back to Character Select Screen</button>
+    </div>
+  </div>
+
+  <!-- HOW TO PLAY SCREEN -->
+  <div id="howto-screen" class="screen hidden">
+    <div class="screen-inner">
+
+      <!-- TITLE -->
+      <h1>How to Play/Assumptions</h1>
+
+      <!-- HOW TO PLAY SECTION -->
+      <section id="howto-section">
+
+        <div class="howto-step">
+          <h2>Step 1: Choose Your Character</h2>
+          <img src="images/howto-character.png" alt="Character select screen" class="howto-img">
+          <p class="howto-details-text">Click on the character you will be using (the one shielding the attack) and press "Start".</p>
+        </div>
+
+        <div class="howto-step">
+          <h2>Step 2: Answer Questions</h2>
+          <img src="images/howto-question.png" alt="Question screen" class="howto-img">
+          <p class="howto-details-text">Select the correct answer before timer runs out (~15 seconds).</p>
+        </div>
+
+        <div class="howto-step">
+          <h2>Step 3: Check Results</h2>
+          <img src="images/howto-results.png" alt="Answer buttons" class="howto-img">
+          <p class="howto-details-text">Click on "View Explanations" to review which questions you got correct/incorrect.</p>
+        </div>
+
+      </section>
+
+      <!-- ASSUMPTIONS SECTION -->
+      <section id="assumptions-section">
+        <h2>Assumptions (Version 1.0)</h2>
+        <ul>
+          <li>Attacker is close enough for all oos options to hit.</li>
+          <li>Attacker is on the <strong>FRONT SIDE</strong> after shielding attack.</li>
+          <li>Attacker is on the <strong>GROUND</strong> after shielding attack.</li>
+          <li>Choose guaranteed oos punish with the <strong>SLOWEST</strong> startup.</li>
+          <li>If nothing works, choose "No Guaranteed Punish".</li>
+          <li>Footstools are not included as an oos option.</li>
+        </ul>
+      </section>
+
+      <!-- BOTTOM BUTTON -->
+      <button id="back-to-start-howto" class="secondary-btn">
+        Back to Character Select
+      </button>
+
+    </div>
+  </div>
+
+<!-- =================== COUNTDOWN SCREEN =================== -->
+  <div id="countdown-screen" class="screen centered hidden">
+    <div class="screen-inner">
+      <div id="countdown-text">3</div>
+    </div>  
+  </div>
+
+  <!-- =================== QUESTION SCREEN =================== -->
+  <div id="question-screen" class="screen hidden">
+    <div class="screen-inner">
+      <div id="question-counter" class="question-counter"></div>
+
+      <div id="question-text"></div>
+
+      <div id="timer-container">
+        <div id="timer-bar"></div>
+      </div>
+
+      <div id="answers">
+        <button class="answer-btn"></button>
+        <button class="answer-btn"></button>
+        <button class="answer-btn"></button>
+        <button class="answer-btn"></button>
+      </div>
+
+      <p id="answer-feedback" class="answer-feedback"></p>
+    </div>  
+  </div>
+
+  <!-- =================== RESULTS SCREEN =================== -->
+  <div id="results-screen" class="screen hidden">
+    <div id="results-content" class="screen-inner">
+      <h1 id="results-title">Results</h1>
+
+      <!-- Character image -->
+      <div id="results-image-box">
+        <img id="results-character-img" src="" alt="Character" />
+      </div>
+      <p id="results-character-img-label"></p>
+
+      <p id="results-summary"></p>
+
+      <div id="results-buttons">
+        <button id="play-again-results" class="primary-btn">
+          Retry
+        </button>
+
+        <button id="view-explanations-btn" class="secondary-btn">
+          View Explanations
+        </button>
+        
+        <button id="back-to-start-results" class="secondary-btn">
+          Choose a Different Character
+        </button>
+
+        <button id="share-results-btn" class="secondary-btn">
+          Share Your Results on Twitter (X)
+        </button>
+        <button id="submit-feedback-btn-results" class="secondary-btn">
+          Submit Feedback
+        </button>
+      </div>
+    </div>  
+  </div>
+
+  <!-- =================== EXPLANATION SCREEN =================== -->
+  <div id="explanation-screen" class="screen hidden">
+    <div class="screen-inner">
+      <h2 id="review-title">Review Your Answers</h2>
+
+      <div id="explanation-list"></div>
+
+      <button id="play-again-explanation" class="primary-btn">Retry</button>
+      <button id="back-to-results-btn" class="secondary-btn">Back to Results</button>
+      <button id="back-to-start-explanation" class="secondary-btn">Choose a Different Character</button>
+      <button id="submit-feedback-btn-explanation" class="secondary-btn">
+        Submit Feedback
+      </button>
+    </div>
+  </div>
+
+  <!-- =================== BOTTOM BANNER =================== -->
+  <div class="acnh-banner bottom-banner">
+    <div class="banner-bottom">
+      <div class="banner-bottom-content">
+        <!-- Row 1 -->
+        <div class="banner-bottom-line">
+          Presented by 
+          <a href="https://www.youtube.com/@Tomokiconan" target="_blank" rel="noopener noreferrer" class="banner-bottom-link">
+            Tomoki (Global Smash Channel)
+          </a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="banner-bottom-line">
+          Copyright ©
+          <a href="https://www.smashtoolbox.com/" target="_blank" rel="noopener noreferrer" class="banner-bottom-link">
+            smashtoolbox.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="share-popup" class="popup hidden">
+    <div class="popup-content">
+      <button id="popup-close" class="popup-close">✕</button>
+      <p>Do you want to download a screenshot of your results?</p>
+      <div class="popup-buttons">
+        <button id="popup-yes">Yes, download</button>
+        <button id="popup-no">No, just tweet</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =================== SCRIPTS =================== -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,807 @@
+/* COLOR PALETTE */
+:root {
+  /* Base */
+  --bg-main: #f3ecda;           /* softer parchment */
+  --bg-panel: #fff3d6;         /* card background */
+  --bg-banner: #8b5a2b;
+  --bg-banner-top: #9b6a3a;
+  --bg-banner-bottom: #7a4a22;
+
+  /* Primary UI */
+  --btn-main: #ffd79b;
+  --btn-main-hover: #ffe6b8;
+  --btn-border: #d7a066;
+
+  --btn-secondary: #f5dab7;
+  --btn-secondary-hover: #fde6c8;
+
+  /* Text */
+  --text-main: #3a2416;
+  --text-soft: #4c3120;
+  --text-light: #f8f3ea;
+
+  /* Accents */
+  --accent-green: #6fbf73;     /* softer than pure #4CAF50 */
+  --accent-yellow: #f4c04f;
+  --accent-red: #e26a5c;
+
+  /* UI */
+  --shadow-soft: rgba(0,0,0,0.15);
+  --shadow-strong: rgba(0,0,0,0.25);
+}
+
+/* =================== GLOBAL =================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
+  background-color: var(--bg-main); /*OLD: #f0e8d0 */
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen {
+  width: 100%;
+  flex: 1; /* ← THIS is the key */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal centering */
+  justify-content: flex-start;
+
+  padding: 24px 0;
+  box-sizing: border-box;
+}
+
+.screen-inner {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;                      /* fills space between banners */
+  justify-content: center;      /* vertical centering */
+  align-items: center;          /* horizontal centering */
+}
+
+/* 
+.screen {
+  outline: 2px dashed red;
+}
+.screen-inner {
+  outline: 2px dashed blue;
+} */
+
+
+.hidden {
+  display: none !important;
+}
+
+h1, h2 {
+  color: var(--text-main); /*OLD: #3a2d23 */
+  text-align: center;
+}
+
+h3, p {
+  color: var(--text-soft);/* OLD: #230f01 */
+  text-align: center;
+}
+
+/* BANNERS */
+.acnh-banner {
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+
+  background-color: var(--bg-banner);/* OLD: #8b5a2b */
+  background-image:
+    linear-gradient(to bottom, var(--bg-banner-top), var(--bg-banner-bottom)), /* OLD: #9b6a3a, #7a4a22*/
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.05) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-text {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", system-ui, sans-serif;
+  letter-spacing: 0.04em;
+
+  color: var(--text-light); /* OLD: #f4f1ea */
+  text-shadow: 0 2px 2px rgba(0,0,0,0.4);
+
+  pointer-events: none; /* prevent clicks */
+  user-select: none;
+}
+
+.banner-text-top {
+  font-size: clamp(28px, 28px, 28px);
+  font-weight: 700;
+}
+
+.banner-bottom {
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.banner-text-bottom {
+  font-size: clamp(18px, 3.6vw, 28px);
+  font-weight: 700;
+}
+
+/* Inner wrapper ensures text stays grouped */
+.banner-bottom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  text-align: center;
+
+  line-height: 1.4;
+}
+
+.banner-bottom-line {
+  color: #f4f1ea; /* warm white */
+  font-size: 14px;
+  margin: 0;                 /* IMPORTANT */
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .banner-bottom-line {
+    font-size: 12px;
+  }
+}
+
+.banner-top-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: clamp(28px, 28px, 28px);
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", system-ui, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.banner-top-link:hover {
+  background-size: 0% 2px;
+}
+
+.banner-bottom-link {
+  color: #f4f1ea;
+  text-decoration: none;
+
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 2px;       /* thickness */
+  background-position: 0 100%;     /* bottom of text */
+  background-repeat: no-repeat;
+}
+
+.banner-bottom-link:hover {
+  background-size: 0% 2px;
+}
+
+/* BUTTONS */
+
+.primary-btn {
+  width: 200px;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: var(--text-main); /* OLD: #230f01 */
+  border-radius: 15px;
+  border: 3px solid var(--btn-border); /* OLD: #d69f6e*/
+  background-color: var(--btn-main); /* OLD: #ffcf8a */
+  box-shadow: 0 4px 6px var(--shadow-strong); /* OLD: rgba(0,0,0,0.2)*/
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+  max-width: 90%;
+}
+
+.primary-btn:enabled {
+  font-weight: 600;
+}
+
+.primary-btn:hover:enabled {
+  background-color: var(--btn-main-hover); /* OLD: #ffdca8 */
+  transform: scale(1.05);
+}
+
+.primary-btn:disabled {
+  /* OLD: #6b5443 */
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  width: 200px;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  border: 3px solid var(--btn-border); /* OLD: #d69f6e */
+  background-color: var(--btn-secondary); /* OLD: #fdd9b5 NEED TO FIX, FEELS TOO LIGHT */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.secondary-btn:hover:enabled {
+  transform: scale(1.05);
+  background-color: var(--btn-secondary-hover); /* OLD: #ffd8a6 */
+}
+
+.secondary-btn:disabled {
+  cursor: not-allowed;
+}
+
+#ult-tools-btn {
+  max-width: 300px;
+  border-radius: 15px;
+  border: 1px solid var(--btn-border);
+  background-color: var(--text-light);
+  margin-bottom: 300px;
+  cursor: pointer;
+}
+
+#ult-tools-btn:hover {
+  border-width: 2px;
+}
+
+#ult-oosquiz-btn {
+  max-width: 300px;
+  border-radius: 15px;
+  border: 1px solid var(--btn-border);
+  background-color: var(--text-light);
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+#ult-oosquiz-btn:hover {
+  border-width: 3px;
+}
+
+.image-container {
+  position: relative; /* Establishes the positioning context for absolute children */
+  display: inline-block; /* Helps the container wrap the image's dimensions */
+  margin-bottom: 300px; /* spacing AFTER overlay is calculated */
+}
+
+.image-container img {
+  display: block; /* Removes default spacing issues */
+  max-width: 300px;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute; /* Positions the text over the image */
+  top: 50%; /* Centers the text vertically */
+  left: 50%; /* Centers the text horizontally */
+  transform: translate(-50%, -50%); /* Ensures perfect centering */
+  color: var(--text-light); /* Makes text visible on dark images */
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* readability */
+  text-align: center;
+  pointer-events: none;    /* clicks go through to image */
+}
+
+/* =================== START SCREEN =================== */
+#title {
+  max-width: 100%;
+  text-align: center;
+  padding: 0 12px;
+  word-break: break-word;
+}
+
+#character-grid {
+  display: grid;
+  gap: 6px;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 60px));
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  #character-grid{
+    grid-template-columns: repeat(auto-fit, minmax(60px, 22%));
+  }
+}
+
+.character-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.character-img:hover {
+  transform: scale(1.05);
+}
+
+.character-img.selected {
+  border-color: var(--accent-green); /* OLD: #4CAF50 */
+}
+
+#start-quiz-btn {
+  margin-top: 30px;
+}
+
+/* =================== OOS Frame Data SCREEN =================== */
+#oos-frames-list {
+  margin: 20px;
+}
+
+tr:first-child {
+  background-color: #fac999; /* Background for the first row */
+}
+
+/* =================== How to Play SCREEN =================== */
+#howto-section {
+  margin: 0px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.howto-step {
+  margin: 30px;
+}
+
+.howto-details-text {
+  text-align: left;
+}
+
+.howto-img {
+  display: block;
+  width: 100%;
+  max-width: 480px;   /* ← control image size here */
+  height: 100%;
+  max-height: 480px;
+  height: auto;
+  margin: 12px auto;
+  border: 1px solid transparent;
+  border-color: var(--btn-border);
+  border-radius: 12px;
+}
+
+#assumptions-section {
+  margin-bottom: 30px;
+}
+
+tr:first-child {
+  background-color: #fac999; /* Background for the first row */
+}
+
+/* =================== COUNTDOWN SCREEN =================== */
+#countdown-text {
+  font-size: 8rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  color: #371701;    /* ACNH-style dark brown text */
+}
+
+/* =================== QUESTION SCREEN =================== */
+#question-counter {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  /* margin-top: 20px; */
+  color: var(--text-soft); /* OLD: #230f01, ACNH-style dark brown text */
+}
+
+#question-text {
+  font-size: 2rem;       /* bigger size */
+  font-weight: bold;
+  color: var(--text-main); /* OLD: #230f01, ACNH-style dark brown text */
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Container for the timer */
+#timer-container {
+  width: 320px;          /* default width on desktop */
+  max-width: 90%;        /* responsive on smaller screens */
+  height: 14px;          /* visible height */
+  border-radius: 10px;
+  background-color: #e4dcc6; /* OLD: #dcd0b2, light background behind timer */
+  margin-top: 40px;
+  margin-bottom: 40px;        /* space between timer and buttons */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  overflow: hidden;      /* ensures inner bar stays inside */
+}
+
+/* Timer bar itself */
+#timer-bar {
+  width: 100%;             /* start full */
+  height: 100%;
+  background-color: var(--accent-green); /* OLD: #4CAF50, green */
+  transition: width 0.05s linear, background-color 0.05s linear;
+}
+
+/* Answer buttons grid */
+#answers {
+  display: grid !important; /* important to override any inherited flex */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-rows: repeat(2, auto);  /* 2 rows */
+  gap: 12px;                            /* space between buttons */
+  justify-content: center;               /* center the grid horizontally */
+  align-items: center;                   /* center the buttons vertically */
+  width: fit-content;                          /* optional fixed width */
+  max-width: 90%;                        /* responsive width */
+  margin: 0 auto;
+}
+
+.answer-btn {
+  width: 300px;
+  height: 90px;
+  background-color: var(--btn-secondary); /* OLD: #fdd9b5 */
+  border: 3px solid var(--btn-border); /* OLD: #d69f6e; */
+  border-radius: 20px;
+  white-space: normal;       /* allow wrapping */
+  text-align: center;
+  word-break: break-word;    /* long words break safely */
+  line-height: 1.2;
+  padding: 6px;
+  font-size: clamp(1rem, 1.5vw, 1.5rem); /* adapt font size to container */
+  color: var(--text-main); /* OLD: #230f01, ACNH-style dark brown text */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px var(--shadow-soft); /* OLD: rgba(0,0,0,0.2) */
+  transition: transform 0.15s, background-color 0.15s, opacity 0.3s;
+  position: relative; /* allows us to place marks inside button */
+}
+
+@media (max-width: 500px) {
+  .answer-btn {
+    width: 100%;       /* responsive width */
+    height: auto;      /* let height grow to fit text */
+    min-height: 56px;  /* ensures touchable size */
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem); /* shrink text if needed */
+  }
+}
+
+/* Mark appears at top-right corner of button */
+.answer-btn .mark {
+  position: absolute;
+  right: -10px;      /* distance from right edge */
+  top: -15px;       /* distance from top edge */
+  font-size: 1.6rem;
+}
+
+.answer-btn:hover:enabled {
+  transform: scale(1.05);
+  background-color: var(--btn-secondary-hover); /* OLD: #ffd8a6 */
+}
+
+.answer-btn:disabled {
+  opacity: 1;               /* keep fully opaque */
+  cursor: default;          /* optional: change cursor instead of default 'not-allowed' */
+  background-color: #fdd9b5;
+  border: 3px solid #d69f6e;
+  color: inherit;           /* keep original text color */
+  pointer-events: none;     /* optional, ensures no clicks */
+}
+
+/* Correct vs incorrect text */
+#answer-feedback {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text-main); /* #333 */
+  text-align: center;
+
+  min-height: 30px; /* reserve enough space for feedback text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer-feedback.hidden {
+  visibility: hidden; /* hides text but keeps space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  #timer-container {
+    width: 90%;
+    height: 12px;
+  }
+  .answers {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    width: 90%;
+  }
+  .answer-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+/* =================== RESULTS SCREEN =================== */
+#results-title {
+  font-size: 3rem; /* Increase as desired */
+  text-align: center;
+  margin-bottom: 0; /* optional spacing below title */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* optional ACNH-style font */
+  color: #000000; /* optional color */
+}
+
+#results-screen h1 {
+  margin-top: 0;   /* was effectively much larger */
+}
+
+#results-content {
+  max-width: 360px;     /* controls how wide the results block is */
+  margin: 0 auto;       /* center horizontally */
+  padding: 16px;
+  text-align: center;
+}
+
+/* #results-screen button {
+  width: 200px;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  border: 3px solid #d69f6e;
+  background-color: #fdd9b5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+#results-screen button:hover {
+  transform: scale(1.05);
+  background-color: #ffd8a6;
+} */
+
+/* #results-character-img {
+  width: auto;           /* or any size you want 
+  height: auto;  
+  max-width: 200px;         
+  display: block;         
+  margin: 20px auto;      /* center horizontally with space above/below 
+  border-radius: 10px;    /* optional, ACNH-like rounded look 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* optional nice shadow 
+} */
+
+#results-image-box {
+  width: auto;           /* or any size you want */
+  height: auto;  
+  max-width: 200px;      
+
+  display: block;         
+  margin: 20px auto;      /* center horizontally with space above/below */
+
+  border: 2px solid rgba(255, 255, 255, 0.01);
+  border-radius: 10px;    /* optional, ACNH-like rounded look */
+  padding: 8px;
+
+  background-color: rgba(255, 255, 255, 0.01); /* ← invisible to eye */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* optional nice shadow */
+  box-sizing: border-box;
+/*  width: 100%;
+  max-width: 200px;        SAME width as your results layout
+  margin: 0 auto 12px auto;
+
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: #111;
+
+  box-sizing: border-box; */
+}
+
+#results-character-img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+#results-character-img-label {
+  font-size: 1rem; /* Increase as desired */
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 20px; /* optional spacing below label */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* optional ACNH-style font */
+  color: var(--text-main); /* OLD: #000000, optional color */    
+}
+
+#results-summary {
+  font-size: 1.5rem; /* Increase as desired */
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 20px; /* optional spacing below label */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* optional ACNH-style font */
+  color: var(--text-main); /* OLD: #000000, optional color */  
+}
+
+/* Only for results screenshot*/
+.capture-char-border {
+  border: 1px solid #3a1902 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35) !important;
+}
+.capture-hide {
+  display: none !important;
+}
+
+/* Popups */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  position: relative; /* needed for absolute positioning of X */
+  background: #f0e8d0;
+  padding: 20px 28px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--text-soft); /* OLD: #666 */
+}
+
+.popup-close:hover {
+  color: #000;
+}
+
+.popup-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.popup-buttons button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 3px solid var(--btn-border); /* OLD: #d69f6e */
+  background-color: var(--btn-secondary); /* OLD: #fdd9b5 */
+}
+
+
+/* =================== EXPLANATION SCREEN =================== */
+/* Explanation screen should flow naturally (page scrolls) */
+#explanation-screen {
+  justify-content: flex-start;   /* stop vertical centering */
+  padding-bottom: 72px; /* content + bottom banner */
+}
+
+#explanation-list {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.explanation-block {
+  background-color: var(--bg-panel); /* OLD: #ffeecb */
+  padding: 12px 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 2px solid var(--btn-border); /* OLD: #d69f6e */
+}
+
+.explanation-item .question-text {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+/* Explanation screen should scroll, not overlap banners */
+#explanation-screen .screen-inner {
+  justify-content: flex-start; /* top-align when content is long */
+}
+
+/* #explanation-screen button {
+  width: 200px;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  border: 3px solid #d69f6e;
+  background-color: #fdd9b5;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+#explanation-screen button:hover {
+  transform: scale(1.05);
+  background-color: #ffd8a6;
+} */
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 500px) {
+  .answers {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .answer-btn {
+    font-size: 1rem;
+    height: 50px;
+  }
+
+  .character-img {
+    width: 90px;
+  }
+}
