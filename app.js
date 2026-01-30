@@ -26,6 +26,13 @@ let rank = "";
 // User Session ID
 const sessionId = crypto.randomUUID();
 
+// Page Titles
+const pageTitles = {
+  "home-screen": "Smash Toolbox",
+  "ultimate-screen": "Smash Ultimate",
+  "start-screen": "Smash Ultimate - OOS Quiz"
+};
+
 // Home Screen
 const homeScreen = document.getElementById("home-screen");
 const ultimateBtn = document.getElementById("ult-tools-btn");
@@ -403,6 +410,8 @@ function showScreenForRoute(path) {
     console.warn("No screen for route:", path);
     return;
   }
+
+  setPageTitle(screen.id);
 
   // Use your existing function to show/hide screens
   showScreen(screen);
@@ -1060,6 +1069,8 @@ function showScreen(screen) {
   // Also reset internal scroll if screen itself scrolls
   screen.scrollTop = 0;
 
+  setPageTitle(screen.id);
+
   document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
   screen.classList.remove("hidden");
 }
@@ -1205,6 +1216,15 @@ function logEvent(eventType, data = {}) {
   }).catch(err => console.error("Logging failed", err));
 }
 
+// Set Page Title
+function setPageTitle(screenId) {
+  if (pageTitles[screenId]) {
+    document.title = pageTitles[screenId];
+  } else {
+    document.title = "Smash Toolbox"; // fallback
+  }
+}
+
 // DOM refs
 // functions
 loadQuestionsCSV();
@@ -1216,3 +1236,10 @@ showScreenForRoute(location.pathname);
 
 
 }); // End DOMContentLoaded
+
+document.addEventListener("DOMContentLoaded", () => {
+  const initialScreen = document.querySelector(".screen:not(.hidden)");
+  if (initialScreen) {
+    setPageTitle(initialScreen.id); // 🔹 ensures correct title on first load
+  }
+});
