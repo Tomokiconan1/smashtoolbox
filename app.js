@@ -23,6 +23,13 @@ let rank = "";
  * DOM References
  ***************************************/
 
+// Maintenance Screen
+const MAINTENANCE_MODE = true; // switch to false to reopen
+
+if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
+  window.location.href = "maintenance.html";
+}
+
 // User Session ID
 const sessionId = crypto.randomUUID();
 
@@ -111,13 +118,6 @@ SE.countdown.volume = 0.55;
 SE.question.volume = 0.25;
 SE.correct.volume = 0.3;
 SE.incorrect.volume = 0.25;
-
-// Maintenance Screen
-const MAINTENANCE_MODE = false; // switch to false to reopen
-
-if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
-  window.location.href = "maintenance.html";
-}
 
 /* ==================== MOBILE AUTOPLAY HANDLING ==================== */
 
