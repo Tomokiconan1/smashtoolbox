@@ -30,7 +30,7 @@ const sessionId = crypto.randomUUID();
 const pageTitles = {
   "home-screen": "Smash Toolbox",
   "ultimate-screen": "Smash Ultimate",
-  "start-screen": "Smash Ultimate - OOS Quiz"
+  "start-screen": "Smash Ultimate - OOS Quiz Ver 1.0"
 };
 
 // Home Screen
