@@ -160,7 +160,7 @@ async function loadQuestionsCSV() {
 
   } catch (error) {
     console.error("Failed to load CSV:", error);
-    alert("Failed to load quiz data.");
+    // alert("Failed to load quiz data.");
   }
 }
 
@@ -182,7 +182,7 @@ async function loadCharacterOOSFramesCSV() {
 
   } catch (error) {
     console.error("Failed to load CSV:", error);
-    alert("Failed to load OOS data.");
+    // alert("Failed to load OOS data.");
   }
 }
 
@@ -204,7 +204,7 @@ async function loadCharacterShieldAdvantageCSV() {
 
   } catch (error) {
     console.error("Failed to load CSV:", error);
-    alert("Failed to load Shield Advantage data.");
+    // alert("Failed to load Shield Advantage data.");
   }
 }
 
