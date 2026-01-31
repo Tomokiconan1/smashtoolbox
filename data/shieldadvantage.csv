@@ -1,90 +1,4 @@
 character,move,hitbox,movehitbox,charmovehitbox,shieldadvantage,shieldadvantageforcalc
-Mario,Nair,Early Hit,Nair (Early Hit),Mario Nair (Early Hit),-2,2
-Mario,Nair,Late Hit,Nair (Late Hit),Mario Nair (Late Hit),-3,3
-Mario,Fair,Early Hit,Fair (Early Hit),Mario Fair (Early Hit),-12,12
-Mario,Bair,,Bair,Mario Bair,-2,2
-Mario,Up Air,,Up Air,Mario Up Air,-3,3
-Mario,Dair,,Dair,Mario Dair,-11,11
-Donkey Kong,Nair,Early Hit,Nair (Early Hit),Donkey Kong Nair (Early Hit),-5,5
-Donkey Kong,Nair,Late Hit,Nair (Late Hit),Donkey Kong Nair (Late Hit),-6,6
-Donkey Kong,Fair,Meteor Hit,Fair (Meteor Hit),Donkey Kong Fair (Meteor Hit),-11,11
-Donkey Kong,Bair,Early Hit,Bair (Early Hit),Donkey Kong Bair (Early Hit),-6,6
-Donkey Kong,Dair,Sweetspot Hit,Dair (Sweetspot Hit),Donkey Kong Dair (Sweetspot Hit),-8,8
-Link,Nair,Early Hit,Nair (Early Hit),Link Nair (Early Hit),-1,1
-Link,Nair,Late Hit,Nair (Late Hit),Link Nair (Late Hit),-3,3
-Link,Fair,,Fair,Link Fair,-7,7
-Link,Bair,,Bair,Link Bair,-3,3
-Link,Dair,Fastfall,Dair (Fastfall),Link Dair (Fastfall),-13,13
-Samus,Nair,Strong Hit,Nair (Strong Hit),Samus Nair (Strong Hit),-5,5
-Samus,Fair,Final Hit,Fair (Final Hit),Samus Fair (Final Hit),-11,11
-Samus,Bair,Early Hit,Bair (Early Hit),Samus Bair (Early Hit),-9,9
-Samus,Up Air,Multi Hit,Up Air (Multi Hit),Samus Up Air (Multi Hit),-16,16
-Samus,Dair,Early Hit,Dair (Early Hit),Samus Dair (Early Hit),-8,8
-Yoshi,Nair,Early Hit,Nair (Early Hit),Yoshi Nair (Early Hit),-3,3
-Yoshi,Nair,Late Hit,Nair (Late Hit),Yoshi Nair (Late Hit),-4,4
-Yoshi,Fair,Non Meteor Hit,Fair (Non Meteor Hit),Yoshi Fair (Non Meteor Hit),-6,6
-Yoshi,Fair,Meteor Hit,Fair (Meteor Hit),Yoshi Fair (Meteor Hit),-7,7
-Yoshi,Bair,1st-2nd Hit,Bair (1st-2nd Hit),Yoshi Bair (1st-2nd Hit),-6,6
-Yoshi,Bair,Final Hit,Bair (Final Hit),Yoshi Bair (Final Hit),-7,7
-Yoshi,Up Air,,Up Air,Yoshi Up Air,-3,3
-Yoshi,Dair,,Dair,Yoshi Dair,-14,14
-Kirby,Nair,Early Hit,Nair (Early Hit),Kirby Nair (Early Hit),-2,2
-Kirby,Nair,Late Hit,Nair (Late Hit),Kirby Nair (Late Hit),-3,3
-Kirby,Fair,,Fair,Kirby Fair,-5,5
-Kirby,Bair,Early Hit,Bair (Early Hit),Kirby Bair (Early Hit),-5,5
-Kirby,Up Air,,Up Air,Kirby Up Air,-3,3
-Kirby,Dair,,Dair,Kirby Dair,-12,12
-Fox,Nair,Early Hit,Nair (Early Hit),Fox Nair (Early Hit),-3,3
-Fox,Nair,Late Hit,Nair (Late Hit),Fox Nair (Late Hit),-4,4
-Fox,Fair,,Fair,Fox Fair,-14,14
-Fox,Bair,,Bair,Fox Bair,-4,4
-Fox,Up Air,2nd Hit,Up Air (2nd Hit),Fox Up Air (2nd Hit),-9,9
-Fox,Dair,,Dair,Fox Dair,-14,14
-Pikachu,Nair,,Nair,Pikachu Nair,-7,7
-Pikachu,Fair,Multi Hit,Fair (Multi Hit),Pikachu Fair (Multi Hit),-10,10
-Pikachu,Fair,Final Hit,Fair (Final Hit),Pikachu Fair (Final Hit),-9,9
-Pikachu,Bair,,Bair,Pikachu Bair,-12,12
-Pikachu,Up Air,,Up Air,Pikachu Up Air,-11,11
-Pikachu,Dair,,Dair,Pikachu Dair,-16,16
-Luigi,Nair,Early Hit,Nair (Early Hit),Luigi Nair (Early Hit),-3,3
-Luigi,Nair,Late Hit,Nair (Late Hit),Luigi Nair (Late Hit),-5,5
-Luigi,Fair,,Fair,Luigi Fair,-9,9
-Luigi,Bair,Early Hit,Bair (Early Hit),Luigi Bair (Early Hit),-5,5
-Luigi,Bair,Late Hit,Bair (Late Hit),Luigi Bair (Late Hit),-6,6
-Luigi,Up Air,Early Hit,Up Air (Early Hit),Luigi Up Air (Early Hit),-2,2
-Luigi,Up Air,Late Hit,Up Air (Late Hit),Luigi Up Air (Late Hit),-4,4
-Luigi,Dair,,Dair,Luigi Dair,-8,8
-Luigi,Zair,Aerial Grab,Zair (Aerial Grab),Luigi Zair (Aerial Grab),-2,2
-Ness,Nair,Early Hit,Nair (Early Hit),Ness Nair (Early Hit),-3,3
-Ness,Nair,Late Hit,Nair (Late Hit),Ness Nair (Late Hit),-5,5
-Ness,Fair,Multi Hit,Fair (Multi Hit),Ness Fair (Multi Hit),-10,10
-Ness,Fair,Final Hit,Fair (Final Hit),Ness Fair (Final Hit),-9,9
-Ness,Bair,Early Hit,Bair (Early Hit),Ness Bair (Early Hit),-4,4
-Ness,Bair,Late Hit,Bair (Late Hit),Ness Bair (Late Hit),-6,6
-Ness,Up Air,Multi Hit,Up Air (Multi Hit),Ness Up Air (Multi Hit),-6,6
-Ness,Up Air,Final Hit,Up Air (Final Hit),Ness Up Air (Final Hit),-5,5
-Ness,Dair,Early Hit,Dair (Early Hit),Ness Dair (Early Hit),-7,7
-Ness,Dair,Late Hit,Dair (Late Hit),Ness Dair (Late Hit),-8,8
-Captain Falcon,Nair,,Nair,Captain Falcon Nair,-4,4
-Captain Falcon,Fair,Early Hit,Fair (Early Hit),Captain Falcon Fair (Early Hit),-10,10
-Captain Falcon,Fair,Late Hit,Fair (Late Hit),Captain Falcon Fair (Late Hit),-15,15
-Captain Falcon,Bair,Early Hit,Bair (Early Hit),Captain Falcon Bair (Early Hit),-5,5
-Captain Falcon,Bair,Late Hit,Bair (Late Hit),Captain Falcon Bair (Late Hit),-6,6
-Captain Falcon,Up Air,,Up Air,Captain Falcon Up Air,-6,6
-Captain Falcon,Dair,,Dair,Captain Falcon Dair,-7,7
-Jigglypuff,Nair,Early Hit,Nair (Early Hit),Jigglypuff Nair (Early Hit),-4,4
-Jigglypuff,Nair,Late Hit,Nair (Late Hit),Jigglypuff Nair (Late Hit),-6,6
-Jigglypuff,Fair,Early Hit,Fair (Early Hit),Jigglypuff Fair (Early Hit),-5,5
-Jigglypuff,Fair,Late Hit,Fair (Late Hit),Jigglypuff Fair (Late Hit),-6,6
-Jigglypuff,Bair,,Bair,Jigglypuff Bair,-3,3
-Jigglypuff,Up Air,,Up Air,Jigglypuff Up Air,-5,5
-Jigglypuff,Dair,,Dair,Jigglypuff Dair,-13,13
-Min Min,Nair,Normal Dragon,Nair (Normal Dragon),Min Min Nair (Normal Dragon),-8,8
-Min Min,Nair,Power Dragon,Nair (Power Dragon),Min Min Nair (Power Dragon),-6,6
-Min Min,Nair,Megawatt,Nair (Megawatt),Min Min Nair (Megawatt),-7,7
-Min Min,Nair,Ram Ram,Nair (Ram Ram),Min Min Nair (Ram Ram),-9,9
-Min Min,Up Air,,Up Air,Min Min Up Air,-5,5
-Min Min,Dair,Landing Hit,Dair (Landing Hit),Min Min Dair (Landing Hit),-20,20
 Mario,Jab,3rd Hit,Jab (3rd Hit),Mario Jab (3rd Hit),-25,25
 Mario,Ftilt,,Ftilt,Mario Ftilt,-13,13
 Mario,Up Tilt,,Up Tilt,Mario Up Tilt,-18,18
@@ -95,6 +9,12 @@ Mario,F Smash,Close Hit,F Smash (Close Hit),Mario F Smash (Close Hit),-20,20
 Mario,Up Smash,,Up Smash,Mario Up Smash,-20,20
 Mario,Down Smash,1st Hit,Down Smash (1st Hit),Mario Down Smash (1st Hit),-30,30
 Mario,Down Smash,2nd Hit,Down Smash (2nd Hit),Mario Down Smash (2nd Hit),-20,20
+Mario,Nair,Early Hit,Nair (Early Hit),Mario Nair (Early Hit),-2,2
+Mario,Nair,Late Hit,Nair (Late Hit),Mario Nair (Late Hit),-3,3
+Mario,Fair,Early Hit,Fair (Early Hit),Mario Fair (Early Hit),-12,12
+Mario,Bair,,Bair,Mario Bair,-2,2
+Mario,Up Air,,Up Air,Mario Up Air,-3,3
+Mario,Dair,,Dair,Mario Dair,-11,11
 Donkey Kong,Jab,2nd Hit,Jab (2nd Hit),Donkey Kong Jab (2nd Hit),-20,20
 Donkey Kong,Ftilt,No Angle,Ftilt (No Angle),Donkey Kong Ftilt (No Angle),-19,19
 Donkey Kong,Up Tilt,,Up Tilt,Donkey Kong Up Tilt,-24,24
@@ -104,6 +24,11 @@ Donkey Kong,F Smash,Far Hit,F Smash (Far Hit),Donkey Kong F Smash (Far Hit),-17,
 Donkey Kong,F Smash,Close Hit,F Smash (Close Hit),Donkey Kong F Smash (Close Hit),-18,18
 Donkey Kong,Up Smash,,Up Smash,Donkey Kong Up Smash,-22,22
 Donkey Kong,Down Smash,,Down Smash,Donkey Kong Down Smash,-32,32
+Donkey Kong,Nair,Early Hit,Nair (Early Hit),Donkey Kong Nair (Early Hit),-5,5
+Donkey Kong,Nair,Late Hit,Nair (Late Hit),Donkey Kong Nair (Late Hit),-6,6
+Donkey Kong,Fair,Meteor Hit,Fair (Meteor Hit),Donkey Kong Fair (Meteor Hit),-11,11
+Donkey Kong,Bair,Early Hit,Bair (Early Hit),Donkey Kong Bair (Early Hit),-6,6
+Donkey Kong,Dair,Sweetspot Hit,Dair (Sweetspot Hit),Donkey Kong Dair (Sweetspot Hit),-8,8
 Donkey Kong,Neutral B,Full Charge,Neutral B (Full Charge),Donkey Kong Neutral B (Full Charge),-19,19
 Donkey Kong,Side B,,Side B,Donkey Kong Side B,-32,32
 Donkey Kong,Up B,Grounded,Up B (Grounded),Donkey Kong Up B (Grounded),-37,37
@@ -121,6 +46,11 @@ Link,Up Smash,,Up Smash,Link Up Smash,-28,28
 Link,Down Smash,1st Hit Middle,Down Smash (1st Hit Middle),Link Down Smash (1st Hit Middle),-31,31
 Link,Down Smash,1st Hit Tip,Down Smash (1st Hit Tip),Link Down Smash (1st Hit Tip),-32,32
 Link,Down Smash,2nd Hit,Down Smash (2nd Hit),Link Down Smash (2nd Hit),-31,31
+Link,Nair,Early Hit,Nair (Early Hit),Link Nair (Early Hit),-1,1
+Link,Nair,Late Hit,Nair (Late Hit),Link Nair (Late Hit),-3,3
+Link,Fair,,Fair,Link Fair,-7,7
+Link,Bair,,Bair,Link Bair,-3,3
+Link,Dair,Fastfall,Dair (Fastfall),Link Dair (Fastfall),-13,13
 Link,Side B,Clean Hit,Side B (Clean Hit),Link Side B (Clean Hit),-7,7
 Link,Up B,,Up B,Link Up B,-56,56
 Samus,Jab,2nd Hit,Jab (2nd Hit),Samus Jab (2nd Hit),-15,15
@@ -135,6 +65,11 @@ Samus,F Smash,Far Hit,F Smash (Far Hit),Samus F Smash (Far Hit),-28,28
 Samus,Up Smash,,Up Smash,Samus Up Smash,-24,24
 Samus,Down Smash,1st Hit,Down Smash (1st Hit),Samus Down Smash (1st Hit),-27,27
 Samus,Down Smash,2nd Hit,Down Smash (2nd Hit),Samus Down Smash (2nd Hit),-18,18
+Samus,Nair,Strong Hit,Nair (Strong Hit),Samus Nair (Strong Hit),-5,5
+Samus,Fair,Final Hit,Fair (Final Hit),Samus Fair (Final Hit),-11,11
+Samus,Bair,Early Hit,Bair (Early Hit),Samus Bair (Early Hit),-9,9
+Samus,Up Air,Multi Hit,Up Air (Multi Hit),Samus Up Air (Multi Hit),-16,16
+Samus,Dair,Early Hit,Dair (Early Hit),Samus Dair (Early Hit),-8,8
 Yoshi,Jab,2nd Hit,Jab (2nd Hit),Yoshi Jab (2nd Hit),-11,11
 Yoshi,Ftilt,,Ftilt,Yoshi Ftilt,-16,16
 Yoshi,Up Tilt,,Up Tilt,Yoshi Up Tilt,-16,16
@@ -145,6 +80,14 @@ Yoshi,F Smash,,F Smash,Yoshi F Smash,-27,27
 Yoshi,Up Smash,,Up Smash,Yoshi Up Smash,-24,24
 Yoshi,Down Smash,1st Hit,Down Smash (1st Hit),Yoshi Down Smash (1st Hit),-33,33
 Yoshi,Down Smash,2nd Hit,Down Smash (2nd Hit),Yoshi Down Smash (2nd Hit),-18,18
+Yoshi,Nair,Early Hit,Nair (Early Hit),Yoshi Nair (Early Hit),-3,3
+Yoshi,Nair,Late Hit,Nair (Late Hit),Yoshi Nair (Late Hit),-4,4
+Yoshi,Fair,Non Meteor Hit,Fair (Non Meteor Hit),Yoshi Fair (Non Meteor Hit),-6,6
+Yoshi,Fair,Meteor Hit,Fair (Meteor Hit),Yoshi Fair (Meteor Hit),-7,7
+Yoshi,Bair,1st-2nd Hit,Bair (1st-2nd Hit),Yoshi Bair (1st-2nd Hit),-6,6
+Yoshi,Bair,Final Hit,Bair (Final Hit),Yoshi Bair (Final Hit),-7,7
+Yoshi,Up Air,,Up Air,Yoshi Up Air,-3,3
+Yoshi,Dair,,Dair,Yoshi Dair,-14,14
 Yoshi,Down B,,Down B,Yoshi Down B,-32,32
 Kirby,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Kirby Jab (Rapid Jab Finisher),-32,32
 Kirby,Ftilt,Close Hit,Ftilt (Close Hit),Kirby Ftilt (Close Hit),-10,10
@@ -157,6 +100,12 @@ Kirby,F Smash,,F Smash,Kirby F Smash,-23,23
 Kirby,Up Smash,Close Hit,Up Smash (Close Hit),Kirby Up Smash (Close Hit),-22,22
 Kirby,Up Smash,Tip Hit,Up Smash (Tip Hit),Kirby Up Smash (Tip Hit),-24,24
 Kirby,Down Smash,,Down Smash,Kirby Down Smash,-33,33
+Kirby,Nair,Early Hit,Nair (Early Hit),Kirby Nair (Early Hit),-2,2
+Kirby,Nair,Late Hit,Nair (Late Hit),Kirby Nair (Late Hit),-3,3
+Kirby,Fair,,Fair,Kirby Fair,-5,5
+Kirby,Bair,Early Hit,Bair (Early Hit),Kirby Bair (Early Hit),-5,5
+Kirby,Up Air,,Up Air,Kirby Up Air,-3,3
+Kirby,Dair,,Dair,Kirby Dair,-12,12
 Kirby,Side B,Full Charge,Side B (Full Charge),Kirby Side B (Full Charge),-17,17
 Kirby,Up B,Landing Hit,Up B (Landing Hit),Kirby Up B (Landing Hit),-21,21
 Kirby,Down B,Ground,Down B (Ground),Kirby Down B (Ground),-35,35
@@ -171,6 +120,12 @@ Fox,Dash Attack,,Dash Attack,Fox Dash Attack,-16,16
 Fox,F Smash,,F Smash,Fox F Smash,-22,22
 Fox,Up Smash,,Up Smash,Fox Up Smash,-36,36
 Fox,Down Smash,,Down Smash,Fox Down Smash,-36,36
+Fox,Nair,Early Hit,Nair (Early Hit),Fox Nair (Early Hit),-3,3
+Fox,Nair,Late Hit,Nair (Late Hit),Fox Nair (Late Hit),-4,4
+Fox,Fair,,Fair,Fox Fair,-14,14
+Fox,Bair,,Bair,Fox Bair,-4,4
+Fox,Up Air,2nd Hit,Up Air (2nd Hit),Fox Up Air (2nd Hit),-9,9
+Fox,Dair,,Dair,Fox Dair,-14,14
 Fox,Side B,Ground,Side B (Ground),Fox Side B (Ground),-18,18
 Fox,Side B,Air,Side B (Air),Fox Side B (Air),-28,28
 Fox,Up B,,Up B,Fox Up B,-34,34
@@ -182,6 +137,12 @@ Pikachu,Dash Attack,,Dash Attack,Pikachu Dash Attack,-11,11
 Pikachu,F Smash,,F Smash,Pikachu F Smash,-29,29
 Pikachu,Up Smash,,Up Smash,Pikachu Up Smash,-24,24
 Pikachu,Down Smash,,Down Smash,Pikachu Down Smash,-39,39
+Pikachu,Nair,,Nair,Pikachu Nair,-7,7
+Pikachu,Fair,Multi Hit,Fair (Multi Hit),Pikachu Fair (Multi Hit),-10,10
+Pikachu,Fair,Final Hit,Fair (Final Hit),Pikachu Fair (Final Hit),-9,9
+Pikachu,Bair,,Bair,Pikachu Bair,-12,12
+Pikachu,Up Air,,Up Air,Pikachu Up Air,-11,11
+Pikachu,Dair,,Dair,Pikachu Dair,-16,16
 Pikachu,Up B,,Up B,Pikachu Up B,-33,33
 Pikachu,Down B,,Down B,Pikachu Down B,-26,26
 Luigi,Jab,3rd Hit,Jab (3rd Hit),Luigi Jab (3rd Hit),-19,19
@@ -193,6 +154,15 @@ Luigi,F Smash,,F Smash,Luigi F Smash,-18,18
 Luigi,Up Smash,,Up Smash,Luigi Up Smash,-20,20
 Luigi,Down Smash,Close Hit,Down Smash (Close Hit),Luigi Down Smash (Close Hit),-20,20
 Luigi,Down Smash,Far Hit,Down Smash (Far Hit),Luigi Down Smash (Far Hit),-12,12
+Luigi,Nair,Early Hit,Nair (Early Hit),Luigi Nair (Early Hit),-3,3
+Luigi,Nair,Late Hit,Nair (Late Hit),Luigi Nair (Late Hit),-5,5
+Luigi,Fair,,Fair,Luigi Fair,-9,9
+Luigi,Bair,Early Hit,Bair (Early Hit),Luigi Bair (Early Hit),-5,5
+Luigi,Bair,Late Hit,Bair (Late Hit),Luigi Bair (Late Hit),-6,6
+Luigi,Up Air,Early Hit,Up Air (Early Hit),Luigi Up Air (Early Hit),-2,2
+Luigi,Up Air,Late Hit,Up Air (Late Hit),Luigi Up Air (Late Hit),-4,4
+Luigi,Dair,,Dair,Luigi Dair,-8,8
+Luigi,Zair,Aerial Grab,Zair (Aerial Grab),Luigi Zair (Aerial Grab),-2,2
 Luigi,Down B,,Down B,Luigi Down B,-40,40
 Ness,Jab,3rd Hit,Jab (3rd Hit),Ness Jab (3rd Hit),-18,18
 Ness,Ftilt,,Ftilt,Ness Ftilt,-17,17
@@ -206,6 +176,16 @@ Ness,F Smash,Far Hit,F Smash (Far Hit),Ness F Smash (Far Hit),-19,19
 Ness,Up Smash,,Up Smash,Ness Up Smash,-33,33
 Ness,Down Smash,Weak Hit,Down Smash (Weak Hit),Ness Down Smash (Weak Hit),-21,21
 Ness,Down Smash,Strong Hit,Down Smash (Strong Hit),Ness Down Smash (Strong Hit),-7,7
+Ness,Nair,Early Hit,Nair (Early Hit),Ness Nair (Early Hit),-3,3
+Ness,Nair,Late Hit,Nair (Late Hit),Ness Nair (Late Hit),-5,5
+Ness,Fair,Multi Hit,Fair (Multi Hit),Ness Fair (Multi Hit),-10,10
+Ness,Fair,Final Hit,Fair (Final Hit),Ness Fair (Final Hit),-9,9
+Ness,Bair,Early Hit,Bair (Early Hit),Ness Bair (Early Hit),-4,4
+Ness,Bair,Late Hit,Bair (Late Hit),Ness Bair (Late Hit),-6,6
+Ness,Up Air,Multi Hit,Up Air (Multi Hit),Ness Up Air (Multi Hit),-6,6
+Ness,Up Air,Final Hit,Up Air (Final Hit),Ness Up Air (Final Hit),-5,5
+Ness,Dair,Early Hit,Dair (Early Hit),Ness Dair (Early Hit),-7,7
+Ness,Dair,Late Hit,Dair (Late Hit),Ness Dair (Late Hit),-8,8
 Ness,Side B,,Side B,Ness Side B,-28,28
 Ness,Up B,Self Hit,Up B (Self Hit),Ness Up B (Self Hit),-33,33
 Ness,Down B,,Down B,Ness Down B,-12,12
@@ -221,6 +201,13 @@ Captain Falcon,Up Smash,1st Hit,Up Smash (1st Hit),Captain Falcon Up Smash (1st 
 Captain Falcon,Up Smash,2nd Hit,Up Smash,Captain Falcon Up Smash,-7,7
 Captain Falcon,Down Smash,1st Hit,Down Smash (1st Hit),Captain Falcon Down Smash (1st Hit),-19,19
 Captain Falcon,Down Smash,2nd Hit,Down Smash (2nd Hit),Captain Falcon Down Smash (2nd Hit),-7,7
+Captain Falcon,Nair,,Nair,Captain Falcon Nair,-4,4
+Captain Falcon,Fair,Early Hit,Fair (Early Hit),Captain Falcon Fair (Early Hit),-10,10
+Captain Falcon,Fair,Late Hit,Fair (Late Hit),Captain Falcon Fair (Late Hit),-15,15
+Captain Falcon,Bair,Early Hit,Bair (Early Hit),Captain Falcon Bair (Early Hit),-5,5
+Captain Falcon,Bair,Late Hit,Bair (Late Hit),Captain Falcon Bair (Late Hit),-6,6
+Captain Falcon,Up Air,,Up Air,Captain Falcon Up Air,-6,6
+Captain Falcon,Dair,,Dair,Captain Falcon Dair,-7,7
 Captain Falcon,Neutral B,Ground,Neutral B (Ground),Captain Falcon Neutral B (Ground),-28,28
 Captain Falcon,Neutral B,Air,Neutral B (Air),Captain Falcon Neutral B (Air),-30,30
 Captain Falcon,Side B,Ground,Side B (Ground),Captain Falcon Side B (Ground),-12,12
@@ -236,6 +223,13 @@ Jigglypuff,Dash Attack,Late Hit,Dash Attack (Late Hit),Jigglypuff Dash Attack (L
 Jigglypuff,F Smash,,F Smash,Jigglypuff F Smash,-22,22
 Jigglypuff,Up Smash,,Up Smash,Jigglypuff Up Smash,-18,18
 Jigglypuff,Down Smash,,Down Smash,Jigglypuff Down Smash,-26,26
+Jigglypuff,Nair,Early Hit,Nair (Early Hit),Jigglypuff Nair (Early Hit),-4,4
+Jigglypuff,Nair,Late Hit,Nair (Late Hit),Jigglypuff Nair (Late Hit),-6,6
+Jigglypuff,Fair,Early Hit,Fair (Early Hit),Jigglypuff Fair (Early Hit),-5,5
+Jigglypuff,Fair,Late Hit,Fair (Late Hit),Jigglypuff Fair (Late Hit),-6,6
+Jigglypuff,Bair,,Bair,Jigglypuff Bair,-3,3
+Jigglypuff,Up Air,,Up Air,Jigglypuff Up Air,-5,5
+Jigglypuff,Dair,,Dair,Jigglypuff Dair,-13,13
 Jigglypuff,Side B,,Side B,Jigglypuff Side B,-11,11
 Min Min,Jab,3rd Hit,Jab (3rd Hit),Min Min Jab (3rd Hit),-23,23
 Min Min,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Min Min Jab (Rapid Jab Finisher),-28,28
@@ -248,3 +242,9 @@ Min Min,F Smash,Powered Dragon Late Hit,F Smash (Powered Dragon Late Hit),Min Mi
 Min Min,Up Smash,Far Hit,Up Smash (Far Hit),Min Min Up Smash (Far Hit),-34,34
 Min Min,Down Smash,Front Hit,Down Smash (Front Hit),Min Min Down Smash (Front Hit),-33,33
 Min Min,Down Smash,Back Hit,Down Smash (Back Hit),Min Min Down Smash (Back Hit),-32,32
+Min Min,Nair,Normal Dragon,Nair (Normal Dragon),Min Min Nair (Normal Dragon),-8,8
+Min Min,Nair,Power Dragon,Nair (Power Dragon),Min Min Nair (Power Dragon),-6,6
+Min Min,Nair,Megawatt,Nair (Megawatt),Min Min Nair (Megawatt),-7,7
+Min Min,Nair,Ram Ram,Nair (Ram Ram),Min Min Nair (Ram Ram),-9,9
+Min Min,Up Air,,Up Air,Min Min Up Air,-5,5
+Min Min,Dair,Landing Hit,Dair (Landing Hit),Min Min Dair (Landing Hit),-20,20
