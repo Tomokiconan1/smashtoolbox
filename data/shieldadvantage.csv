@@ -22,8 +22,8 @@ Samus,Up Air,Multi Hit,Up Air (Multi Hit),Samus Up Air (Multi Hit),-16,16
 Samus,Dair,Early Hit,Dair (Early Hit),Samus Dair (Early Hit),-8,8
 Yoshi,Nair,Early Hit,Nair (Early Hit),Yoshi Nair (Early Hit),-3,3
 Yoshi,Nair,Late Hit,Nair (Late Hit),Yoshi Nair (Late Hit),-4,4
-Yoshi,Fair,Non Meteor,Fair (Non Meteor),Yoshi Fair (Non Meteor),-6,6
-Yoshi,Fair,Meteor,Fair (Meteor),Yoshi Fair (Meteor),-7,7
+Yoshi,Fair,Non Meteor Hit,Fair (Non Meteor Hit),Yoshi Fair (Non Meteor Hit),-6,6
+Yoshi,Fair,Meteor Hit,Fair (Meteor Hit),Yoshi Fair (Meteor Hit),-7,7
 Yoshi,Bair,1st-2nd Hit,Bair (1st-2nd Hit),Yoshi Bair (1st-2nd Hit),-6,6
 Yoshi,Bair,Final Hit,Bair (Final Hit),Yoshi Bair (Final Hit),-7,7
 Yoshi,Up Air,,Up Air,Yoshi Up Air,-3,3
@@ -85,3 +85,166 @@ Min Min,Nair,Megawatt,Nair (Megawatt),Min Min Nair (Megawatt),-7,7
 Min Min,Nair,Ram Ram,Nair (Ram Ram),Min Min Nair (Ram Ram),-9,9
 Min Min,Up Air,,Up Air,Min Min Up Air,-5,5
 Min Min,Dair,Landing Hit,Dair (Landing Hit),Min Min Dair (Landing Hit),-20,20
+Mario,Jab,3rd Hit,Jab (3rd Hit),Mario Jab (3rd Hit),-25,25
+Mario,Ftilt,,Ftilt,Mario Ftilt,-13,13
+Mario,Up Tilt,,Up Tilt,Mario Up Tilt,-18,18
+Mario,Down Tilt,Close Hit,Down Tilt (Close Hit),Mario Down Tilt (Close Hit),-15,15
+Mario,Dash Attack,,Dash Attack,Mario Dash Attack,-17,17
+Mario,F Smash,Far Hit,F Smash (Far Hit),Mario F Smash (Far Hit),-22,22
+Mario,F Smash,Close Hit,F Smash (Close Hit),Mario F Smash (Close Hit),-20,20
+Mario,Up Smash,,Up Smash,Mario Up Smash,-20,20
+Mario,Down Smash,1st Hit,Down Smash (1st Hit),Mario Down Smash (1st Hit),-30,30
+Mario,Down Smash,2nd Hit,Down Smash (2nd Hit),Mario Down Smash (2nd Hit),-20,20
+Donkey Kong,Jab,2nd Hit,Jab (2nd Hit),Donkey Kong Jab (2nd Hit),-20,20
+Donkey Kong,Ftilt,No Angle,Ftilt (No Angle),Donkey Kong Ftilt (No Angle),-19,19
+Donkey Kong,Up Tilt,,Up Tilt,Donkey Kong Up Tilt,-24,24
+Donkey Kong,Down Tilt,,Down Tilt,Donkey Kong Down Tilt,-11,11
+Donkey Kong,Dash Attack,,Dash Attack,Donkey Kong Dash Attack,-13,13
+Donkey Kong,F Smash,Far Hit,F Smash (Far Hit),Donkey Kong F Smash (Far Hit),-17,17
+Donkey Kong,F Smash,Close Hit,F Smash (Close Hit),Donkey Kong F Smash (Close Hit),-18,18
+Donkey Kong,Up Smash,,Up Smash,Donkey Kong Up Smash,-22,22
+Donkey Kong,Down Smash,,Down Smash,Donkey Kong Down Smash,-32,32
+Donkey Kong,Neutral B,Full Charge,Neutral B (Full Charge),Donkey Kong Neutral B (Full Charge),-19,19
+Donkey Kong,Side B,,Side B,Donkey Kong Side B,-32,32
+Donkey Kong,Up B,Grounded,Up B (Grounded),Donkey Kong Up B (Grounded),-37,37
+Donkey Kong,Down B,Grounded,Down B (Grounded),Donkey Kong Down B (Grounded),-15,15
+Donkey Kong,Down B,Landing,Down B (Landing),Donkey Kong Down B (Landing),-4,4
+Link,Jab,3rd Hit,Jab (3rd Hit),Link Jab (3rd Hit),-23,23
+Link,Ftilt,,Ftilt,Link Ftilt,-12,12
+Link,Up Tilt,,Up Tilt,Link Up Tilt,-16,16
+Link,Down Tilt,,Down Tilt,Link Down Tilt,-11,11
+Link,Dash Attack,,Dash Attack,Link Dash Attack,-19,19
+Link,F Smash,1st Hit Hilt,F Smash (1st Hit Hilt),Link F Smash (1st Hit Hilt),-27,27
+Link,F Smash,1st Hit Tip,F Smash (1st Hit Tip),Link F Smash (1st Hit Tip),-23,23
+Link,F Smash,2nd Hit,F Smash (2nd Hit),Link F Smash (2nd Hit),-41,41
+Link,Up Smash,,Up Smash,Link Up Smash,-28,28
+Link,Down Smash,1st Hit Middle,Down Smash (1st Hit Middle),Link Down Smash (1st Hit Middle),-31,31
+Link,Down Smash,1st Hit Tip,Down Smash (1st Hit Tip),Link Down Smash (1st Hit Tip),-32,32
+Link,Down Smash,2nd Hit,Down Smash (2nd Hit),Link Down Smash (2nd Hit),-31,31
+Link,Side B,Clean Hit,Side B (Clean Hit),Link Side B (Clean Hit),-7,7
+Link,Up B,,Up B,Link Up B,-56,56
+Samus,Jab,2nd Hit,Jab (2nd Hit),Samus Jab (2nd Hit),-15,15
+Samus,Ftilt,Close Hit,Ftilt (Close Hit),Samus Ftilt (Close Hit),-17,17
+Samus,Ftilt,Middle Hit,Ftilt (Middle Hit),Samus Ftilt (Middle Hit),-16,16
+Samus,Ftilt,Far Hit,Ftilt (Far Hit),Samus Ftilt (Far Hit),-15,15
+Samus,Up Tilt,,Up Tilt,Samus Up Tilt,-12,12
+Samus,Down Tilt,,Down Tilt,Samus Down Tilt,-26,26
+Samus,Dash Attack,,Dash Attack,Samus Dash Attack,-23,23
+Samus,F Smash,Close Hit,F Smash (Close Hit),Samus F Smash (Close Hit),-29,29
+Samus,F Smash,Far Hit,F Smash (Far Hit),Samus F Smash (Far Hit),-28,28
+Samus,Up Smash,,Up Smash,Samus Up Smash,-24,24
+Samus,Down Smash,1st Hit,Down Smash (1st Hit),Samus Down Smash (1st Hit),-27,27
+Samus,Down Smash,2nd Hit,Down Smash (2nd Hit),Samus Down Smash (2nd Hit),-18,18
+Yoshi,Jab,2nd Hit,Jab (2nd Hit),Yoshi Jab (2nd Hit),-11,11
+Yoshi,Ftilt,,Ftilt,Yoshi Ftilt,-16,16
+Yoshi,Up Tilt,,Up Tilt,Yoshi Up Tilt,-16,16
+Yoshi,Down Tilt,Close Hit,Down Tilt (Close Hit),Yoshi Down Tilt (Close Hit),-9,9
+Yoshi,Down Tilt,Far Hit,Down Tilt (Far Hit),Yoshi Down Tilt (Far Hit),-10,10
+Yoshi,Dash Attack,,Dash Attack,Yoshi Dash Attack,-19,19
+Yoshi,F Smash,,F Smash,Yoshi F Smash,-27,27
+Yoshi,Up Smash,,Up Smash,Yoshi Up Smash,-24,24
+Yoshi,Down Smash,1st Hit,Down Smash (1st Hit),Yoshi Down Smash (1st Hit),-33,33
+Yoshi,Down Smash,2nd Hit,Down Smash (2nd Hit),Yoshi Down Smash (2nd Hit),-18,18
+Yoshi,Down B,,Down B,Yoshi Down B,-32,32
+Kirby,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Kirby Jab (Rapid Jab Finisher),-32,32
+Kirby,Ftilt,Close Hit,Ftilt (Close Hit),Kirby Ftilt (Close Hit),-10,10
+Kirby,Ftilt,Far Hit,Ftilt (Far Hit),Kirby Ftilt (Far Hit),-11,11
+Kirby,Up Tilt,Early Hit,Up Tilt (Early Hit),Kirby Up Tilt (Early Hit),-10,10
+Kirby,Up Tilt,Late Hit,Up Tilt (Late Hit),Kirby Up Tilt (Late Hit),-9,9
+Kirby,Down Tilt,,Down Tilt,Kirby Down Tilt,-9,9
+Kirby,Dash Attack,,Dash Attack,Kirby Dash Attack,-31,31
+Kirby,F Smash,,F Smash,Kirby F Smash,-23,23
+Kirby,Up Smash,Close Hit,Up Smash (Close Hit),Kirby Up Smash (Close Hit),-22,22
+Kirby,Up Smash,Tip Hit,Up Smash (Tip Hit),Kirby Up Smash (Tip Hit),-24,24
+Kirby,Down Smash,,Down Smash,Kirby Down Smash,-33,33
+Kirby,Side B,Full Charge,Side B (Full Charge),Kirby Side B (Full Charge),-17,17
+Kirby,Up B,Landing Hit,Up B (Landing Hit),Kirby Up B (Landing Hit),-21,21
+Kirby,Down B,Ground,Down B (Ground),Kirby Down B (Ground),-35,35
+Kirby,Down B,Air,Down B (Air),Kirby Down B (Air),-17,17
+Fox,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Fox Jab (Rapid Jab Finisher),-32,32
+Fox,Ftilt,,Ftilt,Fox Ftilt,-10,10
+Fox,Up Tilt,Clean Hit,Up Tilt (Clean Hit),Fox Up Tilt (Clean Hit),-17,17
+Fox,Up Tilt,Late Hit,Up Tilt (Late Hit),Fox Up Tilt (Late Hit),-16,16
+Fox,Down Tilt,Close Hit,Down Tilt (Close Hit),Fox Down Tilt (Close Hit),-12,12
+Fox,Down Tilt,Far Hit,Down Tilt (Far Hit),Fox Down Tilt (Far Hit),-13,13
+Fox,Dash Attack,,Dash Attack,Fox Dash Attack,-16,16
+Fox,F Smash,,F Smash,Fox F Smash,-22,22
+Fox,Up Smash,,Up Smash,Fox Up Smash,-36,36
+Fox,Down Smash,,Down Smash,Fox Down Smash,-36,36
+Fox,Side B,Ground,Side B (Ground),Fox Side B (Ground),-18,18
+Fox,Side B,Air,Side B (Air),Fox Side B (Air),-28,28
+Fox,Up B,,Up B,Fox Up B,-34,34
+Fox,Down B,,Down B,Fox Down B,-30,30
+Pikachu,Ftilt,No Angle,Ftilt (No Angle),Pikachu Ftilt (No Angle),-14,14
+Pikachu,Up Tilt,,Up Tilt,Pikachu Up Tilt,-13,13
+Pikachu,Down Tilt,,Down Tilt,Pikachu Down Tilt,-4,4
+Pikachu,Dash Attack,,Dash Attack,Pikachu Dash Attack,-11,11
+Pikachu,F Smash,,F Smash,Pikachu F Smash,-29,29
+Pikachu,Up Smash,,Up Smash,Pikachu Up Smash,-24,24
+Pikachu,Down Smash,,Down Smash,Pikachu Down Smash,-39,39
+Pikachu,Up B,,Up B,Pikachu Up B,-33,33
+Pikachu,Down B,,Down B,Pikachu Down B,-26,26
+Luigi,Jab,3rd Hit,Jab (3rd Hit),Luigi Jab (3rd Hit),-19,19
+Luigi,Ftilt,,Ftilt,Luigi Ftilt,-18,18
+Luigi,Up Tilt,,Up Tilt,Luigi Up Tilt,-15,15
+Luigi,Down Tilt,,Down Tilt,Luigi Down Tilt,-2,2
+Luigi,Dash Attack,,Dash Attack,Luigi Dash Attack,-17,17
+Luigi,F Smash,,F Smash,Luigi F Smash,-18,18
+Luigi,Up Smash,,Up Smash,Luigi Up Smash,-20,20
+Luigi,Down Smash,Close Hit,Down Smash (Close Hit),Luigi Down Smash (Close Hit),-20,20
+Luigi,Down Smash,Far Hit,Down Smash (Far Hit),Luigi Down Smash (Far Hit),-12,12
+Luigi,Down B,,Down B,Luigi Down B,-40,40
+Ness,Jab,3rd Hit,Jab (3rd Hit),Ness Jab (3rd Hit),-18,18
+Ness,Ftilt,,Ftilt,Ness Ftilt,-17,17
+Ness,Up Tilt,Close Hit,Up Tilt (Close Hit),Ness Up Tilt (Close Hit),-14,14
+Ness,Down Tilt,Close Hit,Down Tilt (Close Hit),Ness Down Tilt (Close Hit),-4,4
+Ness,Down Tilt,Far Hit,Down Tilt (Far Hit),Ness Down Tilt (Far Hit),-3,3
+Ness,Dash Attack,,Dash Attack,Ness Dash Attack,-10,10
+Ness,F Smash,Close Hit,F Smash (Close Hit),Ness F Smash (Close Hit),-21,21
+Ness,F Smash,Middle Hit,F Smash (Middle Hit),Ness F Smash (Middle Hit),-20,20
+Ness,F Smash,Far Hit,F Smash (Far Hit),Ness F Smash (Far Hit),-19,19
+Ness,Up Smash,,Up Smash,Ness Up Smash,-33,33
+Ness,Down Smash,Weak Hit,Down Smash (Weak Hit),Ness Down Smash (Weak Hit),-21,21
+Ness,Down Smash,Strong Hit,Down Smash (Strong Hit),Ness Down Smash (Strong Hit),-7,7
+Ness,Side B,,Side B,Ness Side B,-28,28
+Ness,Up B,Self Hit,Up B (Self Hit),Ness Up B (Self Hit),-33,33
+Ness,Down B,,Down B,Ness Down B,-12,12
+Captain Falcon,Jab,3rd Hit,Jab (3rd Hit),Captain Falcon Jab (3rd Hit),-20,20
+Captain Falcon,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Captain Falcon Jab (Rapid Jab Finisher),-39,39
+Captain Falcon,Ftilt,Close Hit,Ftilt (Close Hit),Captain Falcon Ftilt (Close Hit),-14,14
+Captain Falcon,Ftilt,Far Hit,Ftilt (Far Hit),Captain Falcon Ftilt (Far Hit),-13,13
+Captain Falcon,Up Tilt,,Up Tilt,Captain Falcon Up Tilt,-11,11
+Captain Falcon,Down Tilt,,Down Tilt,Captain Falcon Down Tilt,-13,13
+Captain Falcon,Dash Attack,,Dash Attack,Captain Falcon Dash Attack,-13,13
+Captain Falcon,F Smash,,F Smash,Captain Falcon F Smash,-27,27
+Captain Falcon,Up Smash,1st Hit,Up Smash (1st Hit),Captain Falcon Up Smash (1st Hit),-17,17
+Captain Falcon,Up Smash,2nd Hit,Up Smash,Captain Falcon Up Smash,-7,7
+Captain Falcon,Down Smash,1st Hit,Down Smash (1st Hit),Captain Falcon Down Smash (1st Hit),-19,19
+Captain Falcon,Down Smash,2nd Hit,Down Smash (2nd Hit),Captain Falcon Down Smash (2nd Hit),-7,7
+Captain Falcon,Neutral B,Ground,Neutral B (Ground),Captain Falcon Neutral B (Ground),-28,28
+Captain Falcon,Neutral B,Air,Neutral B (Air),Captain Falcon Neutral B (Air),-30,30
+Captain Falcon,Side B,Ground,Side B (Ground),Captain Falcon Side B (Ground),-12,12
+Captain Falcon,Down B,Ground Middle Hit,Down B (Ground Middle Hit),Captain Falcon Down B (Ground Middle Hit),-40,40
+Captain Falcon,Down B,Ground Late Hit,Down B (Ground Late Hit),Captain Falcon Down B (Ground Late Hit),-37,37
+Captain Falcon,Down B,Air,Down B (Air),Captain Falcon Down B (Air),-25,25
+Jigglypuff,Jab,2nd Hit,Jab (2nd Hit),Jigglypuff Jab (2nd Hit),-7,7
+Jigglypuff,Ftilt,,Ftilt,Jigglypuff Ftilt,-7,7
+Jigglypuff,Up Tilt,,Up Tilt,Jigglypuff Up Tilt,-6,6
+Jigglypuff,Down Tilt,,Down Tilt,Jigglypuff Down Tilt,-10,10
+Jigglypuff,Dash Attack,Early Hit,Dash Attack (Early Hit),Jigglypuff Dash Attack (Early Hit),-22,22
+Jigglypuff,Dash Attack,Late Hit,Dash Attack (Late Hit),Jigglypuff Dash Attack (Late Hit),-23,23
+Jigglypuff,F Smash,,F Smash,Jigglypuff F Smash,-22,22
+Jigglypuff,Up Smash,,Up Smash,Jigglypuff Up Smash,-18,18
+Jigglypuff,Down Smash,,Down Smash,Jigglypuff Down Smash,-26,26
+Jigglypuff,Side B,,Side B,Jigglypuff Side B,-11,11
+Min Min,Jab,3rd Hit,Jab (3rd Hit),Min Min Jab (3rd Hit),-23,23
+Min Min,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Min Min Jab (Rapid Jab Finisher),-28,28
+Min Min,Up Tilt,Clean Hit,Up Tilt (Clean Hit),Min Min Up Tilt (Clean Hit),-31,31
+Min Min,Down Tilt,Early Hit,Down Tilt (Early Hit),Min Min Down Tilt (Early Hit),-18,18
+Min Min,Down Tilt,Late Hit,Down Tilt (Late Hit),Min Min Down Tilt (Late Hit),-17,17
+Min Min,Dash Attack,,Dash Attack,Min Min Dash Attack,-23,23
+Min Min,F Smash,Normal Dragon Late Hit,F Smash (Normal Dragon Late Hit),Min Min F Smash (Normal Dragon Late Hit),-30,30
+Min Min,F Smash,Powered Dragon Late Hit,F Smash (Powered Dragon Late Hit),Min Min F Smash (Powered Dragon Late Hit),-29,29
+Min Min,Up Smash,Far Hit,Up Smash (Far Hit),Min Min Up Smash (Far Hit),-34,34
+Min Min,Down Smash,Front Hit,Down Smash (Front Hit),Min Min Down Smash (Front Hit),-33,33
+Min Min,Down Smash,Back Hit,Down Smash (Back Hit),Min Min Down Smash (Back Hit),-32,32
