@@ -24,7 +24,7 @@ let rank = "";
  ***************************************/
 
 // Maintenance Screen
-const MAINTENANCE_MODE = true; // switch to false to reopen
+const MAINTENANCE_MODE = false; // switch to false to reopen
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
   window.location.href = "maintenance.html";
@@ -33,11 +33,18 @@ if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) 
 // User Session ID
 const sessionId = crypto.randomUUID();
 
+// Top Banner
+const homeLink = document.getElementById("home-link");
+
 // Page Titles
 const pageTitles = {
   "home-screen": "Smash Toolbox",
   "ultimate-screen": "Smash Ultimate",
-  "start-screen": "Smash Ultimate - OOS Quiz Ver 1.0"
+  "start-screen": "Smash Ultimate OOS Quiz Ver 1.0",
+  "question-screen": "Smash Ultimate OOS Quiz Ver 1.0",
+  "results-screen": "Smash Ultimate OOS Quiz Ver 1.0 Results",
+  "explanation-screen": "Smash Ultimate OOS Quiz Ver 1.0 Review",
+  "howto-screen": "How to Play - Smash Ultimate OOS Quiz Ver 1.0"
 };
 
 // Home Screen
@@ -392,9 +399,13 @@ function parseShieldAdvantageCSV(csvText) {
   return shieldAdvantageData;
 }
 
+// Router functions
+function normalizePath(path) {
+  return path.endsWith("/") && path !== "/" ? path.slice(0, -1) : path;
+}
 
-// Router function
 function navigateTo(path) {
+  path = normalizePath(path);
   // Push the new URL to the browser's address bar
   history.pushState({}, "", path);
 
@@ -403,13 +414,17 @@ function navigateTo(path) {
 }
 
 function showScreenForRoute(path) {
+  path = normalizePath(path);
   // Find the screen element with matching data-route
   const screen = document.querySelector(`.screen[data-route="${path}"]`);
 
   if (!screen) {
     console.warn("No screen for route:", path);
+    showScreen(document.getElementById("home-screen"));
+    history.replaceState({}, "", "/");
     return;
   }
+
 
   setPageTitle(screen.id);
 
@@ -419,7 +434,7 @@ function showScreenForRoute(path) {
 
 // Handle browser back/forward buttons
 window.addEventListener("popstate", () => {
-  showScreenForRoute(location.pathname);
+  showScreenForRoute(normalizePath(location.pathname));
 });
 
 
@@ -444,7 +459,7 @@ function showOOSFramesScreen() {
   // Append table to screen
   oosFramesList.appendChild(table);
 
-  showScreen(oosFramesScreen);
+  navigateTo("/ultimate/oosquiz/oosframes");
 }
 
 /***************************************
@@ -510,7 +525,7 @@ function showShieldAdvantageScreen() {
   // Append table to screen
   shieldAdvantageList.appendChild(table);
 
-  showScreen(shieldAdvantageScreen);
+  navigateTo("/ultimate/oosquiz/shieldadvantage");
 }
 
 /***************************************
@@ -588,7 +603,7 @@ function startCountdown(onComplete) {
   const steps = ["3", "2", "1", "GO!"];
   let index = 0;
 
-  showScreen(countdownScreen);
+  navigateTo("/ultimate/oosquiz/countdown");
 
   playCountdownSE();
 
@@ -658,13 +673,19 @@ function showQuestion() {
   resetTimerBarInstant();
   startTimer(timerDuration);
 
-  showScreen(questionScreen);
+  navigateTo("/ultimate/oosquiz/question");
 
 }
 
 /***************************************
  * Event Listeners (Buttons)
  ***************************************/
+// Go back to home from top banner link
+homeLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  navigateTo("/");
+});
+
 // Start Quiz
 startBtn.addEventListener("click", () => {
   // Record action
@@ -719,12 +740,12 @@ startBtn.addEventListener("click", () => {
 
 ultimateBtn.addEventListener("click", () => {
   logEvent("button_click", { button: "select_game_ultimate" });
-  showScreen(ultimateScreen);
+  navigateTo("/ultimate");
 });
 
 ultimateOOSQuizBtn.addEventListener("click", () => {
   logEvent("button_click", { button: "select_tool_ultimateoosquiz" });
-  showScreen(startScreen);
+  navigateTo("/ultimate/oosquiz");
 });
 
 characterImages.forEach(img => {
@@ -752,7 +773,7 @@ checkOOSBtn.addEventListener("click", () => {
 
 backToStartBtnOOSData.addEventListener("click", () => {
   logEvent("button_click", { button: "back_to_start_oos" });
-  showScreen(startScreen);
+  navigateTo("/ultimate/oosquiz");
 });
 
 answerButtons.forEach((button, index) => {
@@ -772,17 +793,17 @@ checkShieldAdvantageBtn.addEventListener("click", () => {
 
 backToStartBtnShieldAdvantage.addEventListener("click", () => {
   logEvent("button_click", { button: "back_to_start_shield_advantage" });
-  showScreen(startScreen);
+  navigateTo("/ultimate/oosquiz");
 });
 
 howtoBtn.addEventListener("click", () => {
   logEvent("button_click", { button: "howtoplay" });
-  showScreen(howToPlayScreen);
+  navigateTo("/ultimate/oosquiz/howto");
 });
 
 backToStartHowto.addEventListener("click", () => {
   logEvent("button_click", { button: "back_to_start_howtoplay" });
-  showScreen(startScreen);
+  navigateTo("/ultimate/oosquiz");
 });
 
 viewExplanationsBtn.addEventListener("click", () => {
@@ -797,7 +818,7 @@ backToResultsBtn.addEventListener("click", () => {
 
 backToStartResultsBtn.addEventListener("click", () => {
   logEvent("button_click", { button: "back_to_start_results" });
-  showScreen(startScreen);
+  navigateTo("/ultimate/oosquiz");
 });
 
 shareResultsBtn.addEventListener("click", async () => {
@@ -862,37 +883,44 @@ shareResultsBtn.addEventListener("click", async () => {
 // START BACK HERE
 playAgainResultsBtn.addEventListener("click", () => {
   logEvent("button_click",{ button: "play_again_results" });
-  restartQuizSameCharacter;
+  restartQuizSameCharacter();
 });
 playAgainExplanationBtn.addEventListener("click", () => {
   logEvent("button_click",{ button: "play_again_explanation" });
-  restartQuizSameCharacter;
+  restartQuizSameCharacter();
 });
 
 /* Submit Feedback Buttons */
 submitFeedbackBtnStart.addEventListener("click", () => {
   logEvent("button_click",{ button: "feedback_form_start" });
-  submitFeedback
+  submitFeedback();
 });
 submitFeedbackBtnResults.addEventListener("click", () => {
   logEvent("button_click",{ button: "feedback_form_results" });
-  submitFeedback
+  submitFeedback();
 });
 submitFeedbackBtnExplanation.addEventListener("click", () => {
   logEvent("button_click",{ button: "feedback_form_explanation" });
-  submitFeedback
+  submitFeedback();
 });
 
 // Back to Start from Explanation Screen
 backToStartBtnExplanation.addEventListener("click", () => {
   logEvent("button_click",{ button: "back_to_start_explanation" });
-  showScreen(startScreen);
+  navigateTo("/ultimate/oosquiz");
 });
 
 /***************************************
  * Handle Answer
  ***************************************/
 function handleAnswer(index) {
+  if (index === null) {
+  answerFeedback.textContent = "⏱ Time up!";
+  SE.incorrect.play();
+  setTimeout(nextQuestion, 1000);
+  return;
+  }
+
   stopTimer();
   disableAnswerButtons();
 
@@ -918,16 +946,13 @@ function handleAnswer(index) {
       button.appendChild(mark);
     }
 
-    // Dim all buttons except the clicked one
-    if (q.choices[clickedIndex] === q.correctText) {
-      // Ensure clicked button stays fully opaque
-      button.classList.remove("incorrect"); // remove any dimming
-      button.style.opacity = "1";
-    } else {
-      button.classList.add("incorrect");
+    // dim all except correct one
+    if (q.choices[i] !== q.correctText) {
       button.style.opacity = "0.5";
+    } else {
+      button.style.opacity = "1";
     }
-  });
+    });
 
   checkAnswer(index);
 
@@ -991,7 +1016,7 @@ function showResultsScreen() {
   resultsImg.alt = selectedCharacter;
   resultsImgLabel.textContent = selectedCharacter;
 
-  showScreen(resultsScreen);
+  navigateTo("/ultimate/oosquiz/results");
 }
 
 function getRank(score, total) {
@@ -1051,7 +1076,7 @@ function showExplanationScreen() {
     explanationList.appendChild(div);
   });
 
-  showScreen(explanationScreen);
+  navigateTo("/ultimate/oosquiz/explanation");
 }
 
 /***************************************
@@ -1063,8 +1088,8 @@ function showScreen(screen) {
     return;
   }
 
-  // Scroll the window to top (mobile + desktop safe)
-  window.scrollTo({ top: 0, behavior: "instant" });
+  // Scroll the window to top
+  window.scrollTo(0, 0);
 
   // Also reset internal scroll if screen itself scrolls
   screen.scrollTop = 0;
@@ -1232,14 +1257,12 @@ loadCharacterOOSFramesCSV();
 loadCharacterShieldAdvantageCSV();
 
 // When the page loads, display the screen corresponding to the URL
-showScreenForRoute(location.pathname);
+showScreenForRoute(normalizePath(location.pathname));
 
 
 }); // End DOMContentLoaded
 
-document.addEventListener("DOMContentLoaded", () => {
-  const initialScreen = document.querySelector(".screen:not(.hidden)");
-  if (initialScreen) {
-    setPageTitle(initialScreen.id); // 🔹 ensures correct title on first load
-  }
+document.getElementById("home-link").addEventListener("click", (e) => {
+  e.preventDefault();      // stop full page reload
+  navigateTo("/");         // use SPA routing instead
 });

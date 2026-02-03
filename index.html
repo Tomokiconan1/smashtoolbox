@@ -13,7 +13,7 @@
   <!-- =================== TOP BANNER =================== -->
   <div class="acnh-banner top-banner">
     <div class="banner-top banner-top-content">
-      <a href="https://tomokiconan1.github.io/smashtoolbox/" rel="noopener noreferrer" class="banner-top-link">
+      <a href="/" id="home-link" class="banner-top-link">
         Smash Toolbox
       </a>
     </div>
@@ -22,7 +22,7 @@
   <!-- =================== HOME SCREEN =================== --> 
   <div id="home-screen" class="screen centered" data-route="/">
     <div class="screen-inner">
-      <img id="ult-tools-btn" src="images/ultimate.png" class="game-btn" onclick="navigateTo('/ultimate')" alt="Smash Ultimate">
+      <img id="ult-tools-btn" src="images/ultimate.png" class="game-btn" alt="Smash Ultimate">
     </div>
   </div>
 
@@ -30,8 +30,7 @@
   <div id="ultimate-screen" class="screen hidden centered" data-route="/ultimate">
     <div class="screen-inner">
       <div class="image-container">
-        <img id="ult-oosquiz-btn" src="images/ultoosquiz.png" class="game-btn" onclick="navigateTo('/ultimate/oosquiz')" alt="Smash Ultimate OOS Quiz">
-        <div class="overlay-text">Smash OOS Quiz</div>
+        <img id="ult-oosquiz-btn" src="images/ultoosquiz.png" class="game-btn" alt="Smash Ultimate OOS Quiz">
       </div>
     </div>
   </div>
@@ -39,7 +38,7 @@
   <!-- =================== START SCREEN =================== -->
   <div id="start-screen" class="screen hidden centered" data-route="/ultimate/oosquiz">
     <div class="screen-inner">
-      <h1 id="title">Smash Ultimate OOS Quiz</h1>
+      <img id="start-screen-logo" src="images/ultoosquiz.png">
 
       <p>Select your character:</p>
       <div id="character-grid">
@@ -140,7 +139,7 @@
   </div>
 
 <!-- =================== OOS Frame Data SCREEN =================== -->
-  <div id="oos-frames-screen" class="screen hidden">
+  <div id="oos-frames-screen" class="screen hidden" data-route="/ultimate/oosquiz/oosframes">
     <div class="screen-inner">
       <!-- Character image -->
       <img id="oos-frames-character-img" src="" alt="Character" />
@@ -155,7 +154,7 @@
   </div>
 
 <!-- =================== Shield Advantage SCREEN =================== -->
-  <div id="shield-advantage-screen" class="screen hidden">
+  <div id="shield-advantage-screen" class="screen hidden" data-route="/ultimate/oosquiz/shieldadvantage">
     <div class="screen-inner">
       <!-- Character image -->
       <img id="shield-advantage-character-img" src="" alt="Character" />
@@ -169,8 +168,8 @@
     </div>
   </div>
 
-  <!-- HOW TO PLAY SCREEN -->
-  <div id="howto-screen" class="screen hidden">
+<!-- HOW TO PLAY SCREEN -->
+  <div id="howto-screen" class="screen hidden" data-route="/ultimate/oosquiz/howto">
     <div class="screen-inner">
 
       <!-- TITLE -->
@@ -221,14 +220,14 @@
   </div>
 
 <!-- =================== COUNTDOWN SCREEN =================== -->
-  <div id="countdown-screen" class="screen centered hidden">
+  <div id="countdown-screen" class="screen centered hidden" data-route="/ultimate/oosquiz/countdown">
     <div class="screen-inner">
       <div id="countdown-text">3</div>
     </div>  
   </div>
 
   <!-- =================== QUESTION SCREEN =================== -->
-  <div id="question-screen" class="screen hidden">
+  <div id="question-screen" class="screen hidden" data-route="/ultimate/oosquiz/question">
     <div class="screen-inner">
       <div id="question-counter" class="question-counter"></div>
 
@@ -250,7 +249,7 @@
   </div>
 
   <!-- =================== RESULTS SCREEN =================== -->
-  <div id="results-screen" class="screen hidden">
+  <div id="results-screen" class="screen hidden" data-route="/ultimate/oosquiz/results">
     <div id="results-content" class="screen-inner">
       <h1 id="results-title">Results</h1>
 
@@ -286,7 +285,7 @@
   </div>
 
   <!-- =================== EXPLANATION SCREEN =================== -->
-  <div id="explanation-screen" class="screen hidden">
+  <div id="explanation-screen" class="screen hidden" data-route="/ultimate/oosquiz/explanation">
     <div class="screen-inner">
       <h2 id="review-title">Review Your Answers</h2>
 
@@ -315,10 +314,7 @@
 
         <!-- Row 2 -->
         <div class="banner-bottom-line">
-          Copyright ©
-          <a href="https://tomokiconan1.github.io/smashtoolbox/" target="_blank" rel="noopener noreferrer" class="banner-bottom-link">
-            Smash Toolbox
-          </a>
+          Copyright © Smash Toolbox
         </div>
       </div>
     </div>

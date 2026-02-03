@@ -294,19 +294,19 @@ h3, p {
   max-width: 300px;
   border-radius: 15px;
   border: 1px solid var(--btn-border);
-  background-color: var(--text-light);
+  margin-bottom: 300px;
   cursor: pointer;
   filter: brightness(0.9);
 }
 
 #ult-oosquiz-btn:hover {
-  border-width: 3px;
+  border-width: 2px;
 }
 
 .image-container {
-  position: relative; /* Establishes the positioning context for absolute children */
+  position: fixed; /* Establishes the positioning context for absolute children */
   display: inline-block; /* Helps the container wrap the image's dimensions */
-  margin-bottom: 300px; /* spacing AFTER overlay is calculated */
+  /* margin-bottom: spacing AFTER overlay is calculated */
 }
 
 .image-container img {
@@ -315,20 +315,24 @@ h3, p {
   height: auto;
 }
 
-.overlay-text {
-  position: absolute; /* Positions the text over the image */
-  top: 50%; /* Centers the text vertically */
-  left: 50%; /* Centers the text horizontally */
-  transform: translate(-50%, -50%); /* Ensures perfect centering */
-  color: var(--text-light); /* Makes text visible on dark images */
+/* .overlay-text {
+  position: absolute; /* Positions the text over the image
+  top: 50%; /* Centers the text vertically
+  left: 50%; /* Centers the text horizontally
+  transform: translate(-50%, -50%); /* Ensures perfect centering
+  color: var(--text-light); /* Makes text visible on dark images
   font-size: 30px;
   font-weight: bold;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* readability */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* readability
   text-align: center;
-  pointer-events: none;    /* clicks go through to image */
-}
+  pointer-events: none;    /* clicks go through to image
+} */
 
 /* =================== START SCREEN =================== */
+#start-screen-logo {
+  max-width: 360px;
+}
+
 #title {
   max-width: 100%;
   text-align: center;
