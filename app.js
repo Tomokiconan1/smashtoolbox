@@ -24,11 +24,19 @@ let rank = "";
  ***************************************/
 
 // Maintenance Screen
-const MAINTENANCE_MODE = false; // switch to false to reopen
+const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
   window.location.href = "maintenance.html";
 }
+
+// Make app read initial route
+const params = new URLSearchParams(window.location.search);
+const routeFrom404 = params.get("route");
+
+const initialRoute = routeFrom404
+  ? normalizePath(routeFrom404)
+  : normalizePath(location.pathname);
 
 // User Session ID
 const sessionId = crypto.randomUUID();
@@ -415,6 +423,19 @@ function navigateTo(path) {
 
 function showScreenForRoute(path) {
   path = normalizePath(path);
+
+  // Go back to start screen if quiz was not loaded beforehand
+  const needsQuizState = [
+    "/ultimate/oosquiz/question",
+    "/ultimate/oosquiz/results",
+    "/ultimate/oosquiz/explanation"
+  ];
+
+  if (needsQuizState.includes(path) && quizQuestions.length === 0) {
+    navigateTo("/ultimate/oosquiz");
+    return;
+  }
+
   // Find the screen element with matching data-route
   const screen = document.querySelector(`.screen[data-route="${path}"]`);
 
@@ -1257,7 +1278,7 @@ loadCharacterOOSFramesCSV();
 loadCharacterShieldAdvantageCSV();
 
 // When the page loads, display the screen corresponding to the URL
-showScreenForRoute(normalizePath(location.pathname));
+showScreenForRoute(initialRoute);
 
 
 }); // End DOMContentLoaded

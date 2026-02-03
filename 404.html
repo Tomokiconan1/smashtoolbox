@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Redirecting…</title>
   <script>
+    // Redirect all unknown routes to root, preserving path
     const path = location.pathname;
-    location.replace("/?" + path);
+    location.replace("/?route=" + path);
   </script>
 </head>
 <body>
