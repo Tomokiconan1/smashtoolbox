@@ -1033,7 +1033,7 @@ function showResultsScreen() {
   const resultsImg = document.getElementById("results-character-img");
   const resultsImgLabel = document.getElementById("results-character-img-label");
   // Set image path dynamically based on selected character
-  resultsImg.src = `images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
+  resultsImg.src = `/images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
   resultsImg.alt = selectedCharacter;
   resultsImgLabel.textContent = selectedCharacter;
 
