@@ -25,9 +25,10 @@ let rank = "";
 
 // Maintenance Screen
 const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
+const stopLog = MAINTENANCE_MODE; // Prevent user actions from getting logged to google sheets
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
-  window.location.href = "maintenance.html";
+  window.location.href = "/maintenance.html";
 }
 
 // Make app read initial route
@@ -468,7 +469,7 @@ function showOOSFramesScreen() {
   const oosFramesCharImgLabel = document.getElementById("oos-frames-character-img-label");
   const oosFramesList = document.getElementById("oos-frames-list");
   // Set image path dynamically based on selected character
-  oosFramesCharImg.src = `images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
+  oosFramesCharImg.src = `/images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
   oosFramesCharImg.alt = selectedCharacter;
   oosFramesCharImgLabel.textContent = selectedCharacter;
   // Clear old table (important!)
@@ -534,7 +535,7 @@ function showShieldAdvantageScreen() {
   const shieldAdvantageCharImgLabel = document.getElementById("shield-advantage-character-img-label");
   const shieldAdvantageList = document.getElementById("shield-advantage-list");
   // Set image path dynamically based on selected character
-  shieldAdvantageCharImg.src = `images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
+  shieldAdvantageCharImg.src = `/images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
   shieldAdvantageCharImg.alt = selectedCharacter;
   shieldAdvantageCharImgLabel.textContent = selectedCharacter;
   // Clear old table (important!)
@@ -1252,6 +1253,9 @@ function submitFeedback() {
 
 /* Log User Actions and Quiz Scores */
 function logEvent(eventType, data = {}) {
+  // Skip logging during maintenance
+  if (stopLog) return;
+
   fetch("https://script.google.com/macros/s/AKfycbyYHjEqZeZDhEcAyUpdoY24Rby7C9OblpO7aa9qaxdiMGqn7-6wS3LrmT_qZ9aQ_x6KlQ/exec", {
     method: "POST",
     body: JSON.stringify({
@@ -1282,8 +1286,3 @@ showScreenForRoute(initialRoute);
 
 
 }); // End DOMContentLoaded
-
-document.getElementById("home-link").addEventListener("click", (e) => {
-  e.preventDefault();      // stop full page reload
-  navigateTo("/");         // use SPA routing instead
-});
