@@ -391,6 +391,11 @@ tr:first-child {
   background-color: #fac999; /* Background for the first row */
 }
 
+/* =================== Shield Advantage SCREEN =================== */
+#shield-advantage-list {
+  margin: 20px;
+}
+
 /* =================== How to Play SCREEN =================== */
 #howto-section {
   margin: 0px;
@@ -489,13 +494,15 @@ tr:first-child {
 
 .answer-btn {
   width: 300px;
-  height: 90px;
+  min-height: 90px;
+  height: auto;
   background-color: var(--btn-secondary); /* OLD: #fdd9b5 */
   border: 3px solid var(--btn-border); /* OLD: #d69f6e; */
   border-radius: 20px;
   white-space: normal;       /* allow wrapping */
   text-align: center;
   word-break: break-word;    /* long words break safely */
+  overflow-wrap: anywhere;
   line-height: 1.2;
   padding: 6px;
   font-size: clamp(1rem, 1.5vw, 1.5rem); /* adapt font size to container */
@@ -507,12 +514,12 @@ tr:first-child {
   position: relative; /* allows us to place marks inside button */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .answer-btn {
     width: 100%;       /* responsive width */
     height: auto;      /* let height grow to fit text */
     min-height: 56px;  /* ensures touchable size */
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem); /* shrink text if needed */
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem); /* shrink text if needed */
   }
 }
 
