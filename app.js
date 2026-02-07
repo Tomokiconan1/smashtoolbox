@@ -25,10 +25,11 @@ let rank = "";
 
 // Maintenance Screen
 const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
-const stopLog = MAINTENANCE_MODE; // Prevent user actions from getting logged to google sheets
+const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
   window.location.href = "/maintenance.html";
+  logEvent("maintenance_screen_accessed",{});
 }
 
 // Make app read initial route
