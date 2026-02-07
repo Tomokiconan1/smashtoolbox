@@ -29,7 +29,6 @@ const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACT
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
   window.location.href = "/maintenance.html";
-  logEvent("maintenance_screen_accessed",{});
 }
 
 // Make app read initial route
