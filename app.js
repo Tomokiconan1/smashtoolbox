@@ -420,6 +420,9 @@ function navigateTo(path) {
 
   // Show the screen associated with this route
   showScreenForRoute(path);
+
+  // Log site access
+  logEvent("site_access", { link: path });
 }
 
 function showScreenForRoute(path) {
@@ -1258,6 +1261,9 @@ function logEvent(eventType, data = {}) {
 
   fetch("https://script.google.com/macros/s/AKfycbyYHjEqZeZDhEcAyUpdoY24Rby7C9OblpO7aa9qaxdiMGqn7-6wS3LrmT_qZ9aQ_x6KlQ/exec", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify({
       sessionId,
       eventType,
@@ -1284,5 +1290,7 @@ loadCharacterShieldAdvantageCSV();
 // When the page loads, display the screen corresponding to the URL
 showScreenForRoute(initialRoute);
 
+// Log first page access
+logEvent("site_access", { link: initialRoute });
 
 }); // End DOMContentLoaded
