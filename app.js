@@ -23,6 +23,17 @@ let rank = "";
  * DOM References
  ***************************************/
 
+// User Session ID
+const sessionId = crypto.randomUUID();
+
+// Make app read initial route
+const params = new URLSearchParams(window.location.search);
+const routeFrom404 = params.get("route");
+
+const initialRoute = routeFrom404
+  ? normalizePath(routeFrom404)
+  : normalizePath(location.pathname);
+
 // Maintenance Screen
 const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
 const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
@@ -37,17 +48,6 @@ if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) 
   }
   window.location.href = "/maintenance.html";
 }
-
-// Make app read initial route
-const params = new URLSearchParams(window.location.search);
-const routeFrom404 = params.get("route");
-
-const initialRoute = routeFrom404
-  ? normalizePath(routeFrom404)
-  : normalizePath(location.pathname);
-
-// User Session ID
-const sessionId = crypto.randomUUID();
 
 // Top Banner
 const homeLink = document.getElementById("home-link");
