@@ -38,15 +38,24 @@ const initialRoute = routeFrom404
 const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
 const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
-if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
-  if (!window.loggedMaintenance) {
-    logEvent("maintenance_access", { 
-      sessionId: sessionId, 
-      link: window.location.pathname 
-    });
-    window.loggedMaintenance = true;
+async function checkMaintenance () {
+  if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
+    // Log maintenance access once per session
+    if (!window.loggedMaintenance) {
+      try {
+        await logEvent("maintenance_access", { 
+          sessionId: sessionId, 
+          link: window.location.pathname 
+        });
+      } catch (err) {
+        console.warn("Failed to log maintenance access:", err);
+      }
+      window.loggedMaintenance = true;
+    }
+
+    // Redirect AFTER logging
+    window.location.href = "/maintenance.html";
   }
-  window.location.href = "/maintenance.html";
 }
 
 // Top Banner
@@ -1290,6 +1299,9 @@ function setPageTitle(screenId) {
     document.title = "Smash Toolbox"; // fallback
   }
 }
+
+// Check if maintenance mode is on
+checkMaintenance();
 
 // DOM refs
 // functions
