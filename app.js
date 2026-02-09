@@ -24,7 +24,7 @@ let rank = "";
  ***************************************/
 
 // Maintenance Screen
-const MAINTENANCE_MODE = false; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
+const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
 const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
