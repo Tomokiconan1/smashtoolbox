@@ -40,20 +40,7 @@ const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACT
 
 async function checkMaintenance () {
   if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
-    // Log maintenance access once per session
-    if (!window.loggedMaintenance) {
-      try {
-        await logEvent("maintenance_access", { 
-          sessionId: sessionId, 
-          link: window.location.pathname 
-        });
-      } catch (err) {
-        console.warn("Failed to log maintenance access:", err);
-      }
-      window.loggedMaintenance = true;
-    }
-
-    // Redirect AFTER logging
+    // Redirect
     window.location.href = "/maintenance.html";
   }
 }
@@ -63,13 +50,15 @@ const homeLink = document.getElementById("home-link");
 
 // Page Titles
 const pageTitles = {
-  "home-screen": "Smash Toolbox",
-  "ultimate-screen": "Smash Ultimate",
-  "start-screen": "Smash Ultimate OOS Quiz Ver 1.0",
-  "question-screen": "Smash Ultimate OOS Quiz Ver 1.0",
-  "results-screen": "Smash Ultimate OOS Quiz Ver 1.0 Results",
-  "explanation-screen": "Smash Ultimate OOS Quiz Ver 1.0 Review",
-  "howto-screen": "How to Play - Smash Ultimate OOS Quiz Ver 1.0"
+  "home-screen": "Smash Toolbox - Home",
+  "ultimate-screen": "Smash Toolbox - Smash Ultimate",
+  "start-screen": "Smash Toolbox - Smash Ultimate OOS Quiz",
+  "question-screen": "Smash Toolbox - Smash Ultimate OOS Quiz",
+  "results-screen": "Smash Toolbox - Smash Ultimate OOS Quiz Results",
+  "explanation-screen": "Smash Toolbox - Smash Ultimate OOS Quiz Review",
+  "howto-screen": "Smash Toolbox - How to Play Smash Ultimate OOS Quiz Ver 1.0",
+  "oos-frames-screen": "Smash Toolbox - Smash Ultimate OOS Frame Data",
+  "shield-advantage-screen":"Smash Toolbox - Smash Ultimate Shield Frame Data"
 };
 
 // Home Screen
@@ -1299,7 +1288,7 @@ function setPageTitle(screenId) {
   }
 }
 
-// Check if maintenance mode is on
+// Redirect if maintenance mode is on
 checkMaintenance();
 
 // DOM refs
@@ -1312,6 +1301,11 @@ loadCharacterShieldAdvantageCSV();
 showScreenForRoute(initialRoute);
 
 // Log first page access
-logEvent("site_access", { link: initialRoute });
+if (MAINTENANCE_MODE) {
+  logEvent("maintenance_access", { link: initialRoute });
+}
+else {
+  logEvent("site_access", { link: initialRoute });
+}
 
 }); // End DOMContentLoaded
