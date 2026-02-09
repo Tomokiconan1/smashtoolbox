@@ -28,6 +28,13 @@ const MAINTENANCE_MODE = true; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
 const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
 if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
+  if (!window.loggedMaintenance) {
+    logEvent("maintenance_access", { 
+      sessionId: sessionId, 
+      link: window.location.pathname 
+    });
+    window.loggedMaintenance = true;
+  }
   window.location.href = "/maintenance.html";
 }
 
