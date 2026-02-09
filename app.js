@@ -1275,19 +1275,18 @@ function logEvent(eventType, data = {}) {
   // Skip logging during maintenance
   if (stopLog) return;
 
+  const params = new URLSearchParams({
+    sessionId: sessionId,
+    eventType: eventType,
+    link: data.link || "",
+    button: data.button || "",
+    character: data.character || "",
+    score: data.score || ""
+  })
+
   fetch("https://script.google.com/macros/s/AKfycbyYHjEqZeZDhEcAyUpdoY24Rby7C9OblpO7aa9qaxdiMGqn7-6wS3LrmT_qZ9aQ_x6KlQ/exec", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: new URLSearchParams({
-      sessionId: sessionId,
-      eventType: eventType,
-      link: data.link || "",
-      button: data.button || "",
-      character: data.character || "",
-      score: data.score || ""
-    })
+    body: params
   }).catch(err => console.error("Logging failed", err));
 }
 
