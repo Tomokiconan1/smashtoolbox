@@ -48,7 +48,7 @@ async function checkMaintenance () {
 // Top Banner
 const homeLink = document.getElementById("home-link");
 
-// Page Titles
+// Page Titles and Descriptions
 const pageTitles = {
   "home-screen": "Smash Toolbox - Home",
   "ultimate-screen": "Smash Toolbox - Smash Ultimate",
@@ -59,6 +59,17 @@ const pageTitles = {
   "howto-screen": "Smash Toolbox - How to Play Smash Ultimate OOS Quiz Ver 1.0",
   "oos-frames-screen": "Smash Toolbox - Smash Ultimate OOS Frame Data",
   "shield-advantage-screen":"Smash Toolbox - Smash Ultimate Shield Frame Data"
+};
+const pageDescriptions = {
+  "home-screen": "Smash Toolbox provides tools and quizzes for Super Smash Bros. Ultimate players.",
+  "ultimate-screen": "Choose a Smash Ultimate tool to use, including the Out of Shield quiz and frame data.",
+  "start-screen": "Test your knowledge of each character's fastest out of shield punishes in Smash Ultimate.",
+  "question-screen": "Answer Smash Ultimate Out of Shield quiz questions.",
+  "results-screen": "View your Smash Ultimate OOS quiz score and rank.",
+  "explanation-screen": "Review correct answers and explanations for Smash Ultimate Out of Shield quiz.",
+  "howto-screen": "Learn how the Smash Ultimate Out of Shield quiz works.",
+  "oos-frames-screen": "View Smash Ultimate out of shield frame data by character.",
+  "shield-advantage-screen": "View Smash Ultimate shield advantage frame data by character."
 };
 
 // Home Screen
@@ -456,7 +467,7 @@ function showScreenForRoute(path) {
   }
 
 
-  setPageTitle(screen.id);
+  setPageSEO(screen.id);
 
   // Use your existing function to show/hide screens
   showScreen(screen);
@@ -1124,7 +1135,7 @@ function showScreen(screen) {
   // Also reset internal scroll if screen itself scrolls
   screen.scrollTop = 0;
 
-  setPageTitle(screen.id);
+  setPageSEO(screen.id);
 
   document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
   screen.classList.remove("hidden");
@@ -1280,11 +1291,27 @@ function logEvent(eventType, data = {}) {
 }
 
 // Set Page Title
-function setPageTitle(screenId) {
+function setPageSEO(screenId) {
+  // TITLE
   if (pageTitles[screenId]) {
     document.title = pageTitles[screenId];
   } else {
     document.title = "Smash Toolbox"; // fallback
+  }
+
+  // META DESCRIPTION
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.name = "description";
+    document.head.appendChild(meta);
+  }
+
+  if (pageDescriptions[screenId]) {
+    meta.content = pageDescriptions[screenId];
+  } else {
+    meta.content = "Smash Toolbox tools and quizzes for Smash Ultimate players.";
   }
 }
 
