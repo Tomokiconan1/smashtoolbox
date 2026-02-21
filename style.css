@@ -292,6 +292,7 @@ h3, p {
 
 #ult-oosquiz-btn {
   max-width: 300px;
+  max-height: 200px;
   border-radius: 15px;
   border: 1px solid var(--btn-border);
   margin-bottom: 300px;
@@ -331,6 +332,7 @@ h3, p {
 /* =================== START SCREEN =================== */
 #start-screen-logo {
   max-width: 360px;
+  margin: -50px;
 }
 
 #title {
