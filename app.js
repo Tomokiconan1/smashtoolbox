@@ -161,26 +161,34 @@ SE.incorrect.volume = SEIncorrect;
 
 /* ==================== MOBILE AUTOPLAY HANDLING ==================== */
 
-/*
-Mobile browsers often block audio from autoplaying until the user interacts with the page.
-We "unlock" the audio on first user interaction without playing any sound.
-*/
-document.addEventListener("click", () => {
-  if (audioUnlocked) return; // already unlocked
+async function unlockAudio() {
+  if (audioUnlocked) return;
   audioUnlocked = true;
-  Object.values(SE).forEach(audio => {
-    // Temporarily mute, play and immediately pause to unlock
-    audio.volume = 0; // 🔑 more reliable than audio.muted = true
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => audio.pause())
-        .catch(() => audio.pause()); // ignore any errors
-    }
-    audio.currentTime = 0; // reset to start
-    audio.volume = 1; // reset audio volume
-  });
-}, { once: true }); // run only once on the first click/tap
+
+  const silent = new Audio();
+  silent.src =
+    "data:audio/mp3;base64,//uQxAAAA"; // tiny silent audio
+  silent.volume = 0;
+
+  try {
+    await silent.play();
+    silent.pause();
+    silent.currentTime = 0;
+  } catch (e) {
+    console.warn("Audio unlock failed:", e);
+  }
+}
+
+// 🔥 IMPORTANT: use touchstart for mobile
+document.addEventListener("touchstart", unlockAudio, { once: true });
+document.addEventListener("click", unlockAudio, { once: true });
+
+function playSE(audio, startTime = 0) {
+  if (!audioUnlocked) return;
+
+  audio.currentTime = startTime;
+  audio.play().catch(err => console.warn("SE failed:", err));
+}
 
 /***************************************
  * Load Questions CSV Automatically on Page Load
@@ -674,10 +682,7 @@ function startCountdown(onComplete) {
 
 function playCountdownSE() {
   // Play the countdown 3-2-1-GO audio
-  if (SE.countdown) {
-    SE.countdown.currentTime = 0.4; // start from beginning
-    SE.countdown.play().catch(err => console.warn("Countdown SE failed:", err));
-  }
+  playSE(SE.countdown, 0.4);
 }
 
 /***************************************
@@ -691,8 +696,7 @@ function showQuestion() {
   counterEl.textContent = `Question ${currentQuestionIndex + 1} / ${quizQuestions.length}`;
 
   // Sounds
-  SE.question.currentTime = 0;
-  SE.question.play();
+  playSE(SE.question);
 
   // Reset all buttons to full opacity and remove old marks
   answerButtons.forEach(button => {
@@ -967,7 +971,7 @@ backToStartBtnExplanation.addEventListener("click", () => {
 // Back to Explanation from OOS frame data screen
 backToExplanationBtnOOS.addEventListener("click", () => {
   logEvent("button_click",{ button: "back_to_explanation_oos" });
-  if (completedQuizzes = 0){
+  if (completedQuizzes === 0){
     navigateTo("/ultimate/oosquiz")
   } else {
     navigateTo("/ultimate/oosquiz/explanation")
@@ -980,7 +984,7 @@ backToExplanationBtnOOS.addEventListener("click", () => {
 function handleAnswer(index) {
   if (index === null) {
   answerFeedback.textContent = "⏱ Time up!";
-  SE.incorrect.play();
+  playSE(SE.incorrect);
   setTimeout(nextQuestion, 1000);
   return;
   }
@@ -1039,12 +1043,12 @@ function checkAnswer(index) {
 
   if (q.choices[index] === q.correctText) {
     answerFeedback.textContent = "✅ Correct!";
-    SE.correct.play(); /* Plays correct sound effect */
+    playSE(SE.correct); /* Plays correct sound effect */
     answerFeedback.classList.add("correct");
     correctCount++;
   } else {
     answerFeedback.textContent = "❌ Incorrect";
-    SE.incorrect.play(); /* Plays incorrect sound effect */
+    playSE(SE.incorrect); /* Plays incorrect sound effect */
     answerFeedback.classList.add("incorrect");
   }
 }

@@ -295,9 +295,36 @@ h3, p {
   max-height: 200px;
   border-radius: 15px;
   border: 1px solid var(--btn-border);
-  margin-bottom: 250px;
+  margin-top: 120px;
   cursor: pointer;
   filter: brightness(0.9);
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* prevent overlap issues */
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  /* fallback */
+  top: 40px;
+}
+
+/* modern devices */
+@supports (top: env(safe-area-inset-top)) {
+  #ult-oosquiz-btn {
+    top: calc(env(safe-area-inset-top) + 20px);
+  }
+}
+
+/* mobile UX improvement */
+@media (max-width: 768px) {
+  #ult-oosquiz-btn {
+    top: auto;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+  }
 }
 
 #ult-oosquiz-btn:hover {
