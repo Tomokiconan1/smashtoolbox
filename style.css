@@ -295,7 +295,7 @@ h3, p {
   max-height: 200px;
   border-radius: 15px;
   border: 1px solid var(--btn-border);
-  margin-bottom: 300px;
+  margin-bottom: 250px;
   cursor: pointer;
   filter: brightness(0.9);
 }

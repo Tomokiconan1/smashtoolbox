@@ -18,6 +18,7 @@ let selectedCharacter = null;
 let isCorrect = null;
 let correctCount = 0;
 let rank = "";
+let completedQuizzes = 0;
 
 /***************************************
  * DOM References
@@ -36,7 +37,7 @@ const initialRoute = routeFrom404
 
 // Maintenance Screen
 const MAINTENANCE_MODE = false; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
-const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
+const stopLog = true; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
 async function checkMaintenance () {
   if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
@@ -56,7 +57,7 @@ const pageTitles = {
   "question-screen": "Smash Toolbox - Smash Ultimate OOS Quiz",
   "results-screen": "Smash Toolbox - Smash Ultimate OOS Quiz Results",
   "explanation-screen": "Smash Toolbox - Smash Ultimate OOS Quiz Review",
-  "howto-screen": "Smash Toolbox - How to Play Smash Ultimate OOS Quiz Ver 1.0",
+  "howto-screen": "Smash Toolbox - How to Play Smash Ultimate OOS Quiz Ver 1.1",
   "oos-frames-screen": "Smash Toolbox - Smash Ultimate OOS Frame Data",
   "shield-advantage-screen":"Smash Toolbox - Smash Ultimate Shield Frame Data"
 };
@@ -92,6 +93,8 @@ const characterImages = document.querySelectorAll(".character-img");
 // OOS Frame Data Screen
 const oosFramesScreen = document.getElementById("oos-frames-screen");
 const backToStartBtnOOSData = document.getElementById("back-to-start-oos");
+const backToExplanationBtnOOS = document.getElementById("back-to-explanation-oos");
+backToExplanationBtnOOS.disabled = true;
 
 // Shield Advantage Frame Data Screen
 const shieldAdvantageScreen = document.getElementById("shield-advantage-screen");
@@ -113,7 +116,7 @@ const timerBar = document.getElementById("timer-bar");
 const answerFeedback = document.getElementById("answer-feedback");
 
 // Results Screen
-const playAgainResultsBtn = document.getElementById("play-again-results");
+const playAgainBtnResults = document.getElementById("play-again-results");
 const resultsScreen = document.getElementById("results-screen");
 const resultsSummary = document.getElementById("results-summary");
 const viewExplanationsBtn = document.getElementById("view-explanations-btn");
@@ -128,7 +131,8 @@ const popupNoBtn = document.getElementById("popup-no");
 // Explanations Screen
 const explanationScreen = document.getElementById("explanation-screen");
 const explanationList = document.getElementById("explanation-list");
-const playAgainExplanationBtn = document.getElementById("play-again-explanation");
+const playAgainBtnExplanation = document.getElementById("play-again-explanation");
+const checkOOSBtnExplanation = document.getElementById("check-oos-frames-btn-explanation");
 const backToStartBtnExplanation = document.getElementById("back-to-start-explanation");
 const backToResultsBtn = document.getElementById("back-to-results-btn");
 const submitFeedbackBtnExplanation = document.getElementById("submit-feedback-btn-explanation");
@@ -146,10 +150,14 @@ const SE = {
 let audioUnlocked = false;
 
 // Optional: adjust volume for each effect
-SE.countdown.volume = 0.55;
-SE.question.volume = 0.25;
-SE.correct.volume = 0.3;
-SE.incorrect.volume = 0.25;
+const SECountdown = 0.50;
+const SEQuestion = 0.20;
+const SECorrect = 0.25;
+const SEIncorrect = 0.20;
+SE.countdown.volume = SECountdown;
+SE.question.volume = SEQuestion;
+SE.correct.volume = SECorrect;
+SE.incorrect.volume = SEIncorrect;
 
 /* ==================== MOBILE AUTOPLAY HANDLING ==================== */
 
@@ -162,7 +170,7 @@ document.addEventListener("click", () => {
   audioUnlocked = true;
   Object.values(SE).forEach(audio => {
     // Temporarily mute, play and immediately pause to unlock
-    audio.muted = true;
+    audio.volume = 0; // 🔑 more reliable than audio.muted = true
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise
@@ -170,7 +178,7 @@ document.addEventListener("click", () => {
         .catch(() => audio.pause()); // ignore any errors
     }
     audio.currentTime = 0; // reset to start
-    audio.muted = false;    // restore muted state
+    audio.volume = 1; // reset audio volume
   });
 }, { once: true }); // run only once on the first click/tap
 
@@ -812,6 +820,11 @@ checkOOSBtn.addEventListener("click", () => {
   showOOSFramesScreen();
 });
 
+checkOOSBtnExplanation.addEventListener("click", () => {
+  logEvent("button_click", { button: "check_oos_explanation" });
+  showOOSFramesScreen();
+});
+
 backToStartBtnOOSData.addEventListener("click", () => {
   logEvent("button_click", { button: "back_to_start_oos" });
   navigateTo("/ultimate/oosquiz");
@@ -922,11 +935,11 @@ shareResultsBtn.addEventListener("click", async () => {
 
 /* Retry Buttons */
 // START BACK HERE
-playAgainResultsBtn.addEventListener("click", () => {
+playAgainBtnResults.addEventListener("click", () => {
   logEvent("button_click",{ button: "play_again_results" });
   restartQuizSameCharacter();
 });
-playAgainExplanationBtn.addEventListener("click", () => {
+playAgainBtnExplanation.addEventListener("click", () => {
   logEvent("button_click",{ button: "play_again_explanation" });
   restartQuizSameCharacter();
 });
@@ -949,6 +962,16 @@ submitFeedbackBtnExplanation.addEventListener("click", () => {
 backToStartBtnExplanation.addEventListener("click", () => {
   logEvent("button_click",{ button: "back_to_start_explanation" });
   navigateTo("/ultimate/oosquiz");
+});
+
+// Back to Explanation from OOS frame data screen
+backToExplanationBtnOOS.addEventListener("click", () => {
+  logEvent("button_click",{ button: "back_to_explanation_oos" });
+  if (completedQuizzes = 0){
+    navigateTo("/ultimate/oosquiz")
+  } else {
+    navigateTo("/ultimate/oosquiz/explanation")
+  }
 });
 
 /***************************************
@@ -1043,6 +1066,9 @@ function showResultsScreen() {
     character: selectedCharacter,
     score: `${correctCount}/${quizQuestions.length}`
   });
+
+  completedQuizzes++;
+
   getRank(correctCount, quizQuestions.length);
 
   resultsSummary.innerHTML =
@@ -1056,6 +1082,9 @@ function showResultsScreen() {
   resultsImg.src = `/images/${selectedCharacter.replace(/\s+/g, "")}1.png`;
   resultsImg.alt = selectedCharacter;
   resultsImgLabel.textContent = selectedCharacter;
+
+  // Enable back to explanation buttons
+  backToExplanationBtnOOS.disabled = false;
 
   navigateTo("/ultimate/oosquiz/results");
 }
