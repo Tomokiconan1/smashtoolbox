@@ -248,3 +248,220 @@ Min Min,Nair,Megawatt,Nair (Megawatt),Min Min Nair (Megawatt),-7,7
 Min Min,Nair,Ram Ram,Nair (Ram Ram),Min Min Nair (Ram Ram),-9,9
 Min Min,Up Air,,Up Air,Min Min Up Air,-5,5
 Min Min,Dair,Landing Hit,Dair (Landing Hit),Min Min Dair (Landing Hit),-20,20
+Peach,Jab,2nd Hit,Jab (2nd Hit),Peach Jab (2nd Hit),-23,23
+Peach,Ftilt,Early Hit,Ftilt (Early Hit),Peach Ftilt (Early Hit),-22,22
+Peach,Up Tilt,Close Hit,Up Tilt (Close Hit),Peach Up Tilt (Close Hit),-20,20
+Peach,Down Tilt,,Down Tilt,Peach Down Tilt,-8,8
+Peach,Dash Attack,,Dash Attack,Peach Dash Attack,-14,14
+Peach,F Smash,Golf,F Smash (Golf),Peach F Smash (Golf),-20,20
+Peach,F Smash,Tennis,F Smash (Tennis),Peach F Smash (Tennis),-21,21
+Peach,F Smash,Pan,F Smash (Pan),Peach F Smash (Pan),-18,18
+Peach,Up Smash,Early Hit,Up Smash (Early Hit),Peach Up Smash (Early Hit),-20,20
+Peach,Down Smash,,Down Smash,Peach Down Smash,-21,21
+Peach,Nair,Early Hit,Nair (Early Hit),Peach Nair (Early Hit),-2,2
+Peach,Nair,Late Hit,Nair (Late Hit),Peach Nair (Late Hit),-4,4
+Peach,Fair,,Fair,Peach Fair,-8,8
+Peach,Bair,Early Hit,Bair (Early Hit),Peach Bair (Early Hit),-6,6
+Peach,Bair,Late Hit,Bair (Late Hit),Peach Bair (Late Hit),-8,8
+Peach,Up Air,,Up Air,Peach Up Air,-4,4
+Peach,Dair,Multi Hit,Dair (Multi Hit),Peach Dair (Multi Hit),-6,6
+Peach,Dair,Final Hit,Dair (Final Hit),Peach Dair (Final Hit),-5,5
+Roy,Jab,Close Hit,Jab (Close Hit),Roy Jab (Close Hit),-9,9
+Roy,Jab,Far Hit,Jab (Far Hit),Roy Jab (Far Hit),-12,12
+Roy,Ftilt,Close Hit,Ftilt (Close Hit),Roy Ftilt (Close Hit),-13,13
+Roy,Ftilt,Far Hit,Ftilt (Far Hit),Roy Ftilt (Far Hit),-17,17
+Roy,Up Tilt,Close Hit,Up Tilt (Close Hit),Roy Up Tilt (Close Hit),-21,21
+Roy,Up Tilt,Far Hit,Up Tilt (Far Hit),Roy Up Tilt (Far Hit),-25,25
+Roy,Down Tilt,Close Hit,Down Tilt (Close Hit),Roy Down Tilt (Close Hit),-3,3
+Roy,Down Tilt,Far Hit,Down Tilt (Far Hit),Roy Down Tilt (Far Hit),-7,7
+Roy,Dash Attack,Close Hit,Dash Attack (Close Hit),Roy Dash Attack (Close Hit),-17,17
+Roy,Dash Attack,Far Hit,Dash Attack (Far Hit),Roy Dash Attack (Far Hit),-21,21
+Roy,F Smash,Close Hit,F Smash (Close Hit),Roy F Smash (Close Hit),-27,27
+Roy,F Smash,Middle Hit,F Smash (Middle Hit),Roy F Smash (Middle Hit),-29,29
+Roy,F Smash,Far Hit,F Smash (Far Hit),Roy F Smash (Far Hit),-32,32
+Roy,Up Smash,,Up Smash,Roy Up Smash,-29,29
+Roy,Down Smash,1st Hit Close,Down Smash (1st Hit Close),Roy Down Smash (1st Hit Close),-46,46
+Roy,Down Smash,1st Hit Far,Down Smash (1st Hit Far),Roy Down Smash (1st Hit Far),-49,49
+Roy,Down Smash,2nd Hit Close,Down Smash (2nd Hit Close),Roy Down Smash (2nd Hit Close),-30,30
+Roy,Down Smash,2nd Hit Far,Down Smash (2nd Hit Far),Roy Down Smash (2nd Hit Far),-33,33
+Roy,Nair,1st Hit,Nair (1st Hit),Roy Nair (1st Hit),-6,6
+Roy,Nair,2nd Hit Close,Nair (2nd Hit Close),Roy Nair (2nd Hit Close),-5,5
+Roy,Nair,2nd Hit Far,Nair (2nd Hit Far),Roy Nair (2nd Hit Far),-6,6
+Roy,Fair,Close Hit,Fair (Close Hit),Roy Fair (Close Hit),-4,4
+Roy,Fair,Far Hit,Fair (Far Hit),Roy Fair (Far Hit),-5,5
+Roy,Bair,Close Hit,Bair (Close Hit),Roy Bair (Close Hit),-5,5
+Roy,Bair,Far Hit,Bair (Far Hit),Roy Bair (Far Hit),-6,6
+Roy,Up Air,Close Hit,Up Air (Close Hit),Roy Up Air (Close Hit),-4,4
+Roy,Up Air,Far Hit,Up Air (Far Hit),Roy Up Air (Far Hit),-5,5
+Roy,Dair,Close Hit,Dair (Close Hit),Roy Dair (Close Hit),-9,9
+Roy,Dair,Far Hit,Dair (Far Hit),Roy Dair (Far Hit),-10,10
+Roy,Side B,4th Hit Up Close,Side B (4th Hit Up Close),Roy Side B (4th Hit Up Close),-31,31
+Roy,Side B,4th Hit Up Far,Side B (4th Hit Up Far),Roy Side B (4th Hit Up Far),-32,32
+Roy,Side B,4th Hit Neutral Close,Side B (4th Hit Neutral Close),Roy Side B (4th Hit Neutral Close),-45,45
+Roy,Side B,4th Hit Neutral Far,Side B (4th Hit Neutral Far),Roy Side B (4th Hit Neutral Far),-46,46
+Roy,Side B,4th Hit Down,Side B (4th Hit Down),Roy Side B (4th Hit Down),-46,46
+Chrom,Jab,,Jab,Chrom Jab,-10,10
+Chrom,Ftilt,,Ftilt,Chrom Ftilt,-15,15
+Chrom,Up Tilt,,Up Tilt,Chrom Up Tilt,-22,22
+Chrom,Dtilt,,Dtilt,Chrom Dtilt,-5,5
+Chrom,Dash Attack,,Dash Attack,Chrom Dash Attack,-21,21
+Chrom,F Smash,,F Smash,Chrom F Smash,-28,28
+Chrom,Up Smash,,Up Smash,Chrom Up Smash,-29,29
+Chrom,Down Smash,1st Hit,Down Smash (1st Hit),Chrom Down Smash (1st Hit),-47,47
+Chrom,Down Smash,2nd Hit,Down Smash (2nd Hit),Chrom Down Smash (2nd Hit),-31,31
+Chrom,Nair,,Nair,Chrom Nair,-6,6
+Chrom,Fair,,Fair,Chrom Fair,-4,4
+Chrom,Bair,,Bair,Chrom Bair,-6,6
+Chrom,Up Air,,Up Air,Chrom Up Air,-4,4
+Chrom,Dair,,Dair,Chrom Dair,-9,9
+Chrom,Side B,4th Hit Up,Side B (4th Hit Up),Chrom Side B (4th Hit Up),-31,31
+Chrom,Side B,4th Hit Neutral,Side B (4th Hit Neutral),Chrom Side B (4th Hit Neutral),-45,45
+Chrom,Side B,4th Hit Down,Side B (4th Hit Down),Chrom Side B (4th Hit Down),-47,47
+Chrom,Up B,,Up B,Chrom Up B,-29,29
+Squirtle,Jab,3rd Hit,Jab (3rd Hit),Squirtle Jab (3rd Hit),-21,21
+Squirtle,Ftilt,,Ftilt,Squirtle Ftilt,-6,6
+Squirtle,Up Tilt,,Up Tilt,Squirtle Up Tilt,-8,8
+Squirtle,Dtilt,,Dtilt,Squirtle Dtilt,-12,12
+Squirtle,Dash Attack,,Dash Attack,Squirtle Dash Attack,-16,16
+Squirtle,F Smash,,F Smash,Squirtle F Smash,-19,19
+Squirtle,Up Smash,,Up Smash,Squirtle Up Smash,-35,35
+Squirtle,Down Smash,,Down Smash,Squirtle Down Smash,-13,13
+Squirtle,Nair,Early Hit,Nair (Early Hit),Squirtle Nair (Early Hit),-4,4
+Squirtle,Nair,Late Hit,Nair (Late Hit),Squirtle Nair (Late Hit),-5,5
+Squirtle,Fair,,Fair,Squirtle Fair,-3,3
+Squirtle,Bair,,Bair,Squirtle Bair,-15,15
+Squirtle,Up Air,,Up Air,Squirtle Up Air,-3,3
+Squirtle,Dair,Final Hit,Dair (Final Hit),Squirtle Dair (Final Hit),-13,13
+Squirtle,Side B,,Side B,Squirtle Side B,-18,18
+Ivysaur,Jab,Final Hit,Jab (Final Hit),Ivysaur Jab (Final Hit),-32,32
+Ivysaur,Ftilt,,Ftilt,Ivysaur Ftilt,-20,20
+Ivysaur,Up Tilt,,Up Tilt,Ivysaur Up Tilt,-18,18
+Ivysaur,Dtilt,,Dtilt,Ivysaur Dtilt,-21,21
+Ivysaur,Dash Attack,,Dash Attack,Ivysaur Dash Attack,-27,27
+Ivysaur,F Smash,,F Smash,Ivysaur F Smash,-33,33
+Ivysaur,Up Smash,,Up Smash,Ivysaur Up Smash,-21,21
+Ivysaur,Down Smash,Close Hit,Down Smash (Close Hit),Ivysaur Down Smash (Close Hit),-26,26
+Ivysaur,Nair,,Nair,Ivysaur Nair,-14,14
+Ivysaur,Fair,,Fair,Ivysaur Fair,-8,8
+Ivysaur,Bair,2nd Hit,Bair (2nd Hit),Ivysaur Bair (2nd Hit),-4,4
+Ivysaur,Up Air,,Up Air,Ivysaur Up Air,-6,6
+Ivysaur,Dair,,Dair,Ivysaur Dair,-9,9
+Ivysaur,Neutral B,,Neutral B,Ivysaur Neutral B,-34,34
+Ivysaur,Side B,,Side B,Ivysaur Side B,-14,14
+Ivysaur,Up B,Close Hit,Up B (Close Hit),Ivysaur Up B (Close Hit),-22,22
+Charizard,Jab,3rd Hit,Jab (3rd Hit),Charizard Jab (3rd Hit),-20,20
+Charizard,Ftilt,Close Hit,Ftilt (Close Hit),Charizard Ftilt (Close Hit),-18,18
+Charizard,Ftilt,Far Hit,Ftilt (Far Hit),Charizard Ftilt (Far Hit),-15,15
+Charizard,Up Tilt,,Up Tilt,Charizard Up Tilt,-16,16
+Charizard,Dtilt,,Dtilt,Charizard Dtilt,-11,11
+Charizard,Dash Attack,,Dash Attack,Charizard Dash Attack,-12,12
+Charizard,F Smash,Close Hit,F Smash (Close Hit),Charizard F Smash (Close Hit),-36,36
+Charizard,Up Smash,,Up Smash,Charizard Up Smash,-24,24
+Charizard,Down Smash,,Down Smash,Charizard Down Smash,-35,35
+Charizard,Nair,Close Hit,Nair (Close Hit),Charizard Nair (Close Hit),-6,6
+Charizard,Nair,Far Hit,Nair (Far Hit),Charizard Nair (Far Hit),-5,5
+Charizard,Fair,,Fair,Charizard Fair,-14,14
+Charizard,Bair,Close Hit,Bair (Close Hit),Charizard Bair (Close Hit),-16,16
+Charizard,Bair,Furthest Hit,Bair (Furthest Hit),Charizard Bair (Furthest Hit),-14,14
+Charizard,Up Air,,Up Air,Charizard Up Air,-8,8
+Charizard,Dair,Early Hit,Dair (Early Hit),Charizard Dair (Early Hit),-16,16
+Charizard,Dair,Late Hit,Dair (Late Hit),Charizard Dair (Late Hit),-17,17
+Palutena,Jab,Final Hit,Jab (Final Hit),Palutena Jab (Final Hit),-32,32
+Palutena,Ftilt,,Ftilt,Palutena Ftilt,-28,28
+Palutena,Up Tilt,,Up Tilt,Palutena Up Tilt,-27,27
+Palutena,Dtilt,,Dtilt,Palutena Dtilt,-17,17
+Palutena,Dash Attack,Early Hit,Dash Attack (Early Hit),Palutena Dash Attack (Early Hit),-23,23
+Palutena,Dash Attack,Late Hit,Dash Attack (Late Hit),Palutena Dash Attack (Late Hit),-21,21
+Palutena,F Smash,Close Hit,F Smash (Close Hit),Palutena F Smash (Close Hit),-34,34
+Palutena,F Smash,Far Hit,F Smash (Far Hit),Palutena F Smash (Far Hit),-36,36
+Palutena,Up Smash,Early Hit,Up Smash (Early Hit),Palutena Up Smash (Early Hit),-34,34
+Palutena,Down Smash,Close Hit,Down Smash (Close Hit),Palutena Down Smash (Close Hit),-41,41
+Palutena,Down Smash,Far Hit,Down Smash (Far Hit),Palutena Down Smash (Far Hit),-42,42
+Palutena,Nair,Multi Hit,Nair (Multi Hit),Palutena Nair (Multi Hit),-10,10
+Palutena,Nair,Final Hit,Nair (Final Hit),Palutena Nair (Final Hit),-9,9
+Palutena,Fair,,Fair,Palutena Fair,-5,5
+Palutena,Bair,,Bair,Palutena Bair,-5,5
+Palutena,Up Air,Multi Hit,Up Air (Multi Hit),Palutena Up Air (Multi Hit),-12,12
+Palutena,Up Air,Final Hit,Up Air (Final Hit),Palutena Up Air (Final Hit),-11,11
+Palutena,Dair,,Dair,Palutena Dair,-7,7
+Palutena,Neutral B,,Neutral B,Palutena Neutral B,-24,24
+Palutena,Side B,,Side B,Palutena Side B,-2,2
+Duck Hunt,Jab,Final Hit,Jab (Final Hit),Duck Hunt Jab (Final Hit),-36,36
+Duck Hunt,Ftilt,,Ftilt,Duck Hunt Ftilt,-15,15
+Duck Hunt,Up Tilt,,Up Tilt,Duck Hunt Up Tilt,-13,13
+Duck Hunt,Dtilt,,Dtilt,Duck Hunt Dtilt,-13,13
+Duck Hunt,Dash Attack,,Dash Attack,Duck Hunt Dash Attack,-23,23
+Duck Hunt,F Smash,,F Smash,Duck Hunt F Smash,-30,30
+Duck Hunt,Up Smash,,Up Smash,Duck Hunt Up Smash,-22,22
+Duck Hunt,Down Smash,,Down Smash,Duck Hunt Down Smash,-24,24
+Duck Hunt,Nair,Early Hit,Nair (Early Hit),Duck Hunt Nair (Early Hit),-5,5
+Duck Hunt,Nair,Late Hit,Nair (Late Hit),Duck Hunt Nair (Late Hit),-7,7
+Duck Hunt,Fair,Early Far Hit,Fair (Early Far Hit),Duck Hunt Fair (Early Far Hit),-5,5
+Duck Hunt,Fair,Early Close Hit,Fair (Early Close Hit),Duck Hunt Fair (Early Close Hit),-6,6
+Duck Hunt,Fair,Late Hit,Fair (Late Hit),Duck Hunt Fair (Late Hit),-6,6
+Duck Hunt,Bair,Far Hit,Bair (Far Hit),Duck Hunt Bair (Far Hit),-9,9
+Duck Hunt,Bair,Close Hit,Bair (Close Hit),Duck Hunt Bair (Close Hit),-10,10
+Duck Hunt,Up Air,Multi Hit,Up Air (Multi Hit),Duck Hunt Up Air (Multi Hit),-9,9
+Duck Hunt,Up Air,Final Hit,Up Air (Final Hit),Duck Hunt Up Air (Final Hit),-8,8
+Duck Hunt,Dair,2nd Hit,Dair (2nd Hit),Duck Hunt Dair (2nd Hit),-11,11
+Pyra,Jab,3rd Hit,Jab (3rd Hit),Pyra Jab (3rd Hit),-24,24
+Pyra,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Pyra Jab (Rapid Jab Finisher),-25,25
+Pyra,Ftilt,Early Hit,Ftilt (Early Hit),Pyra Ftilt (Early Hit),-10,10
+Pyra,Up Tilt,,Up Tilt,Pyra Up Tilt,-19,19
+Pyra,Dtilt,Close Hit,Dtilt (Close Hit),Pyra Dtilt (Close Hit),-11,11
+Pyra,Dtilt,Far Hit,Dtilt (Far Hit),Pyra Dtilt (Far Hit),-9,9
+Pyra,Dash Attack,,Dash Attack,Pyra Dash Attack,-18,18
+Pyra,F Smash,,F Smash,Pyra F Smash,-34,34
+Pyra,Up Smash,1st Hit,Up Smash (1st Hit),Pyra Up Smash (1st Hit),-47,47
+Pyra,Up Smash,2nd Hit,Up Smash (2nd Hit),Pyra Up Smash (2nd Hit),-40,40
+Pyra,Down Smash,1st Hit Close,Down Smash (1st Hit Close),Pyra Down Smash (1st Hit Close),-26,26
+Pyra,Down Smash,1st Hit Far,Down Smash (1st Hit Far),Pyra Down Smash (1st Hit Far),-28,28
+Pyra,Down Smash,2nd Hit Close,Down Smash (2nd Hit Close),Pyra Down Smash (2nd Hit Close),-20,20
+Pyra,Down Smash,2nd Hit Far,Down Smash (2nd Hit Far),Pyra Down Smash (2nd Hit Far),-22,22
+Pyra,Nair,,Nair,Pyra Nair,-11,11
+Pyra,Fair,,Fair,Pyra Fair,-9,9
+Pyra,Bair,,Bair,Pyra Bair,-9,9
+Pyra,Up Air,,Up Air,Pyra Up Air,-4,4
+Pyra,Dair,,Dair,Pyra Dair,-9,9
+Pyra,Neutral B,Uncharged,Neutral B (Uncharged),Pyra Neutral B (Uncharged),-18,18
+Pyra,Neutral B,Full Charge,Neutral B (Full Charge),Pyra Neutral B (Full Charge),-11,11
+Pyra,Up B,,Up B,Pyra Up B,-48,48
+Mythra,Jab,3rd Hit,Jab (3rd Hit),Mythra Jab (3rd Hit),-20,20
+Mythra,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Mythra Jab (Rapid Jab Finisher),-27,27
+Mythra,Ftilt,Early Hit,Ftilt (Early Hit),Mythra Ftilt (Early Hit),-11,11
+Mythra,Up Tilt,,Up Tilt,Mythra Up Tilt,-14,14
+Mythra,Dtilt,Close Hit,Dtilt (Close Hit),Mythra Dtilt (Close Hit),-11,11
+Mythra,Dtilt,Far Hit,Dtilt (Far Hit),Mythra Dtilt (Far Hit),-10,10
+Mythra,Dash Attack,,Dash Attack,Mythra Dash Attack,-22,22
+Mythra,F Smash,,F Smash,Mythra F Smash,-26,26
+Mythra,Up Smash,1st Hit,Up Smash (1st Hit),Mythra Up Smash (1st Hit),-40,40
+Mythra,Up Smash,Final Hit,Up Smash (Final Hit),Mythra Up Smash (Final Hit),-21,21
+Mythra,Down Smash,Blade Hit Close,Down Smash (Blade Hit Close),Mythra Down Smash (Blade Hit Close),-28,28
+Mythra,Down Smash,Blade Hit Far,Down Smash (Blade Hit Far),Mythra Down Smash (Blade Hit Far),-30,30
+Mythra,Down Smash,Leg Hit Close,Down Smash (Leg Hit Close),Mythra Down Smash (Leg Hit Close),-22,22
+Mythra,Down Smash,Leg Hit Far,Down Smash (Leg Hit Far),Mythra Down Smash (Leg Hit Far),-24,24
+Mythra,Nair,,Nair,Mythra Nair,-10,10
+Mythra,Fair,,Fair,Mythra Fair,-7,7
+Mythra,Bair,,Bair,Mythra Bair,-7,7
+Mythra,Up Air,,Up Air,Mythra Up Air,-5,5
+Mythra,Dair,,Dair,Mythra Dair,-7,7
+Mythra,Neutral B,Uncharged,Neutral B (Uncharged),Mythra Neutral B (Uncharged),-21,21
+Mythra,Neutral B,Full Charge,Neutral B (Full Charge),Mythra Neutral B (Full Charge),-8,8
+Mythra,Side B,,Side B,Mythra Side B,-47,47
+Villager,Jab,Rapid Jab Finisher,Jab (Rapid Jab Finisher),Villager Jab (Rapid Jab Finisher),-28,28
+Villager,Ftilt,,Ftilt,Villager Ftilt,-16,16
+Villager,Up Tilt,2nd Hit,Up Tilt (2nd Hit),Villager Up Tilt (2nd Hit),-19,19
+Villager,Dtilt,Close Hit,Dtilt (Close Hit),Villager Dtilt (Close Hit),-17,17
+Villager,Dtilt,Far Hit,Dtilt (Far Hit),Villager Dtilt (Far Hit),-18,18
+Villager,Dash Attack,,Dash Attack,Villager Dash Attack,-22,22
+Villager,F Smash,,F Smash,Villager F Smash,-4,4
+Villager,Up Smash,,Up Smash,Villager Up Smash,-8,8
+Villager,Down Smash,1st Hit,Down Smash (1st Hit),Villager Down Smash (1st Hit),-35,35
+Villager,Down Smash,2nd Hit,Down Smash (2nd Hit),Villager Down Smash (2nd Hit),-15,15
+Villager,Nair,Early Hit,Nair (Early Hit),Villager Nair (Early Hit),-4,4
+Villager,Nair,Late Hit,Nair (Late Hit),Villager Nair (Late Hit),-5,5
+Villager,Fair,,Fair,Villager Fair,-4,4
+Villager,Bair,,Bair,Villager Bair,-3,3
+Villager,Up Air,2 Turnips,Up Air (2 Turnips),Villager Up Air (2 Turnips),-8,8
+Villager,Dair,2 Turnips,Dair (2 Turnips),Villager Dair (2 Turnips),-8,8
+Villager,Down B,Axe,Down B (Axe),Villager Down B (Axe),-28,28
