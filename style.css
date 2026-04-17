@@ -69,13 +69,14 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;                      /* fills space between banners */
-  justify-content: center;      /* vertical centering */
+  justify-content: flex-start;
+  padding-top: 40px;
   align-items: center;          /* horizontal centering */
 }
 
-@media (max-width: 768px) {
+@media (max-height: 700px) {
   .screen-inner {
-    justify-content: flex-start; /* 👈 stop vertical centering */
+    justify-content: flex-start;
     padding-top: 20px;
   }
 }
@@ -312,11 +313,11 @@ h3, p {
   }
 }
 
-/* Mobile UX (recommended: move to bottom) */
+/* Mobile (portrait-safe) */
 @media (max-width: 768px) {
   #ult-oosquiz-btn {
     top: auto;
-    bottom: 100px; /* 👈 IMPORTANT: above bottom banner (80px + spacing) */
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
   }
 }
 
