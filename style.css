@@ -290,20 +290,12 @@ h3, p {
 }
 
 #ult-oosquiz-btn {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-
   max-width: 300px;
-  max-height: 200px;
   border-radius: 15px;
   border: 1px solid var(--btn-border);
+  background-color: var(--text-light);
+  margin-bottom: 300px;
   cursor: pointer;
-  filter: brightness(0.9);
-
-  /* Desktop */
-  top: 100px;
 }
 
 /* Mobile safe-area support */
