@@ -73,14 +73,12 @@ body {
   align-items: center;          /* horizontal centering */
 }
 
-/* 
-.screen {
-  outline: 2px dashed red;
+@media (max-width: 768px) {
+  .screen-inner {
+    justify-content: flex-start; /* 👈 stop vertical centering */
+    padding-top: 20px;
+  }
 }
-.screen-inner {
-  outline: 2px dashed blue;
-} */
-
 
 .hidden {
   display: none !important;
@@ -303,8 +301,8 @@ h3, p {
   cursor: pointer;
   filter: brightness(0.9);
 
-  /* PC + default */
-  top: 100px; /* 80px banner + 20px spacing */
+  /* Desktop */
+  top: 100px;
 }
 
 /* Mobile safe-area support */
@@ -318,7 +316,7 @@ h3, p {
 @media (max-width: 768px) {
   #ult-oosquiz-btn {
     top: auto;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+    bottom: 100px; /* 👈 IMPORTANT: above bottom banner (80px + spacing) */
   }
 }
 
