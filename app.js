@@ -37,7 +37,7 @@ const initialRoute = routeFrom404
 
 // Maintenance Screen
 const MAINTENANCE_MODE = false; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
-const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
+const TEST_MODE = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
 async function checkMaintenance () {
   if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
@@ -1306,7 +1306,7 @@ function submitFeedback() {
 /* Log User Actions and Quiz Scores */
 function logEvent(eventType, data = {}) {
   // Skip logging during maintenance
-  if (stopLog) return;
+  if (TEST_MODE) return;
 
   const params = new URLSearchParams({
     sessionId: sessionId,
