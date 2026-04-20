@@ -37,7 +37,7 @@ const initialRoute = routeFrom404
 
 // Maintenance Screen
 const MAINTENANCE_MODE = false; // SWITCH TO TRUE TO CLOSE, FALSE TO OPEN WEBSITE
-const stopLog = true; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
+const stopLog = false; // SWITCH TO TRUE DURING TESTING, FALSE TO ALLOW USER ACTIONS TO BE LOGGED IN GOOGLE SHEETS
 
 async function checkMaintenance () {
   if (MAINTENANCE_MODE && !window.location.pathname.includes("maintenance.html")) {
