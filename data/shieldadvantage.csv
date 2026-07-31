@@ -465,3 +465,21 @@ Villager,Bair,,Bair,Villager Bair,-3,3
 Villager,Up Air,2 Turnips,Up Air (2 Turnips),Villager Up Air (2 Turnips),-8,8
 Villager,Dair,2 Turnips,Dair (2 Turnips),Villager Dair (2 Turnips),-8,8
 Villager,Down B,Axe,Down B (Axe),Villager Down B (Axe),-28,28
+Sonic,Jab,3rd Hit,Jab (3rd Hit),Sonic Jab (3rd Hit),-26,26
+Sonic,Ftilt,,Ftilt,Sonic Ftilt,-20,20
+Sonic,Up Tilt,,Up Tilt,Sonic Up Tilt,-20,20
+Sonic,Dtilt,,Dtilt,Sonic Dtilt,-15,15
+Sonic,Dash Attack,,Dash Attack,Sonic Dash Attack,-38,38
+Sonic,F Smash,,F Smash,Sonic F Smash,-19,19
+Sonic,Up Smash,,Up Smash,Sonic Up Smash,-29,29
+Sonic,Down Smash,,Down Smash,Sonic Down Smash,-34,34
+Sonic,Nair,Early Hit,Nair (Early Hit),Sonic Nair (Early Hit),-5,5
+Sonic,Nair,Latest Hit,Nair (Latest Hit),Sonic Nair (Latest Hit),-7,7
+Sonic,Fair,,Fair,Sonic Fair,-14,14
+Sonic,Bair,Early Hit,Bair (Early Hit),Sonic Bair (Early Hit),-10,10
+Sonic,Bair,Late Hit,Bair (Late Hit),Sonic Bair (Late Hit),-11,11
+Sonic,Up Air,1st Hit,Up Air (1st Hit),Sonic Up Air (1st Hit),-11,11
+Sonic,Up Air,2nd Hit,Up Air (2nd Hit),Sonic Up Air (2nd Hit),-9,9
+Sonic,Dair,Late Hit,Dair (Late Hit),Sonic Dair (Late Hit),-18,18
+Sonic,Neutral B,Uncharged,Neutral B (Uncharged),Sonic Neutral B (Uncharged),-22,22
+Sonic,Neutral B,Full Charge,Neutral B (Full Charge),Sonic Neutral B (Full Charge),-16,16
